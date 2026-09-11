@@ -105,7 +105,6 @@
             margin-bottom: 15px;
         }
 
-        /* تنسيق الجداول */
         .schedule-section {
             background: white;
             padding: 30px;
@@ -122,13 +121,14 @@
         }
 
         table th, table td {
-            padding: 14px 18px;
-            border-bottom: 1px solid #eee;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
         }
 
         table th {
             background-color: #0056b3;
             color: white;
+            text-align: center;
         }
 
         table tr:nth-child(even) {
@@ -136,11 +136,21 @@
         }
 
         .badge-time {
+            display: block;
             background-color: #e3f2fd;
             color: #0d47a1;
-            padding: 4px 10px;
+            padding: 4px 8px;
             border-radius: 4px;
             font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            margin: 2px 0;
+        }
+
+        .doc-name {
+            font-weight: bold;
+            color: #0056b3;
+            white-space: nowrap;
         }
 
         .back-btn {
@@ -170,14 +180,14 @@
         </div>
         <nav>
             <a href="index.html">الصفحة الرئيسية</a>
-            <a href="#schedule">جداول العيادات</a>
+            <a href="#schedule">جدول العيادات</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="welcome-card">
             <h2>بوابة الخدمات الطبية الشاملة</h2>
-            <p>أهلاً بكم في مستشفى ابن سينا بالعاشر من رمضان</p>
+            <p>أهلاً بكم في مستشفى ابن سينا بالعاشر من رمضان - خدمة طبية متميزة</p>
         </div>
 
         <div class="cards-grid">
@@ -188,43 +198,99 @@
             </div>
 
             <a href="#schedule" class="card">
-                <div class="card-icon"><i class="fa-solid fa-calendar-days"></i></div>
-                <h3>جداول العيادات</h3>
-                <p>استعراض مواعيد وأيام عمل الأطباء في العيادات.</p>
+                <div class="card-icon"><i class="fa-solid fa-tooth"></i></div>
+                <h3>جدول عيادة الأسنان</h3>
+                <p>استعراض مواعيد وأيام عمل أطباء الأسنان بالتفصيل.</p>
             </a>
         </div>
 
-        <!-- مكان إضافة الجداول -->
+        <!-- جدول مواعيد الأسنان المحدث -->
         <div class="schedule-section" id="schedule">
-            <h2 class="section-title" style="margin-top:0;">📅 جدول مواعيد العيادات الخارجية</h2>
+            <h2 class="section-title" style="margin-top:0;">🦷 جدول مواعيد عيادة الأسنان</h2>
             <div style="overflow-x:auto;">
                 <table>
                     <thead>
                         <tr>
-                            <th>التخصص</th>
                             <th>الطبيب المعالج</th>
-                            <th>أيام العمل</th>
-                            <th>المواعيد</th>
+                            <th>السبت</th>
+                            <th>الأحد</th>
+                            <th>الأثنين</th>
+                            <th>الثلاثاء</th>
+                            <th>الأربعاء</th>
+                            <th>الخميس</th>
+                            <th>الجمعة</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>🩺 عيادة الباطنة</strong></td>
-                            <td>د. أحمد سليمان</td>
-                            <td>السبت - الإثنين - الأربعاء</td>
-                            <td><span class="badge-time">04:00 م - 08:00 م</span></td>
+                            <td class="doc-name">د/ محمد الغريب</td>
+                            <td><span class="badge-time">9 ص : 2 م</span></td>
+                            <td><span class="badge-time">5 م : 10 م</span></td>
+                            <td><span class="badge-time">9 ص : 2 م</span></td>
+                            <td>—</td>
+                            <td><span class="badge-time">9 ص : 2 م</span><span class="badge-time">6 م : 10 م</span></td>
+                            <td>—</td>
+                            <td>—</td>
                         </tr>
                         <tr>
-                            <td><strong>🦴 جراحة العظام</strong></td>
-                            <td>د. محمد عبد الفتاح</td>
-                            <td>الأحد - الثلاثاء - الخميس</td>
-                            <td><span class="badge-time">05:00 م - 09:00 م</span></td>
+                            <td class="doc-name">د/ نادين عبدالرازق</td>
+                            <td>—</td>
+                            <td><span class="badge-time">2 م : 5 م</span></td>
+                            <td><span class="badge-time">2 م : 4 م</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
                         </tr>
                         <tr>
-                            <td><strong>👶 عيادة الأطفال</strong></td>
-                            <td>د. سارة محمود</td>
-                            <td>يومياً (ما عدا الجمعة)</td>
-                            <td><span class="badge-time">01:00 م - 06:00 م</span></td>
+                            <td class="doc-name">د/ مريم عبدالعزيز</td>
+                            <td>—</td>
+                            <td><span class="badge-time">9 ص : 2 م</span></td>
+                            <td>—</td>
+                            <td><span class="badge-time">3:00 م : 7 م</span></td>
+                            <td>—</td>
+                            <td><span class="badge-time">7 م : 10 م</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="doc-name">د/ عبدالله ابوالفتوح</td>
+                            <td><span class="badge-time">3 م : 6 م</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td><span class="badge-time">7 م : 10 م</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="doc-name">د/ عبدالله عيسوى</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td><span class="badge-time">4 م : 7 م</span></td>
+                            <td><span class="badge-time">10 ص : 2 م</span></td>
+                            <td><span class="badge-time">4 م : 6 م</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="doc-name">د/ ميسرة سماحة</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td><span class="badge-time">7 م : 10 م</span></td>
+                            <td>—</td>
+                            <td><span class="badge-time">2 م : 4 م</span></td>
+                            <td><span class="badge-time">9.30 ص : 1 م</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="doc-name">د/ أحمد مجدى</td>
+                            <td><span class="badge-time">6 م : 10 م</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td><span class="badge-time">3 م : 7 م</span></td>
+                            <td>—</td>
                         </tr>
                     </tbody>
                 </table>
@@ -237,8 +303,8 @@
     </div>
 
     <footer>
-        <p>مستشفى ابن سينا - العاشر من رمضان - المجاورة العاشر</p>
-        <p>هاتف: 01222243156 / 01222243157</p>
+        <p>مستشفى ابن سينا - العاشر من رمضان - أرض المستشفيات - أمام نادي المجاورة العاشرة</p>
+        <p>تليفون: 01222243157 / 01222243156 | أرضي: 055/4354282</p>
     </footer>
 
 </body>
