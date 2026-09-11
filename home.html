@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدول العيادات - مستشفى ابن سينا</title>
+    <title>مستشفى ابن سينا - مسيرة المستشفى وجدول العيادات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -72,7 +72,7 @@
         .section-title {
             color: #0056b3;
             text-align: center;
-            margin: 10px 0 20px 0;
+            margin: 20px 0;
             font-size: 22px;
             display: flex;
             align-items: center;
@@ -80,7 +80,7 @@
             gap: 10px;
         }
 
-        /* تنسيق الأيقونتين الأساسيتين */
+        /* الأيقونتان الأساسيتان */
         .main-cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -124,6 +124,116 @@
             font-size: 14px;
         }
 
+        /* تنسيقات قسم مسيرة المستشفى */
+        .about-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            scroll-margin-top: 80px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 25px;
+            color: #444;
+            background: #f8f9fa;
+            padding: 20px;
+            border-right: 4px solid #0056b3;
+            border-radius: 4px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .stat-box {
+            background: #0056b3;
+            color: white;
+            padding: 20px 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box .num {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #ffeb3b;
+        }
+
+        .stat-box .label {
+            font-size: 14px;
+        }
+
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .vm-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .vm-card h4 {
+            color: #0056b3;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .goals-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .goals-list li {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .goals-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: #0056b3;
+        }
+
+        .specialties-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #e3f2fd;
+            color: #0d47a1;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* تنسيقات الجداول */
         .schedule-section {
             background: white;
             padding: 25px;
@@ -213,20 +323,113 @@
 
         <!-- الأيقونتان الأساسيتان -->
         <div class="main-cards-grid">
-            <div class="main-card">
+            <a href="#hospital-history" class="main-card">
                 <div class="main-card-icon"><i class="fa-solid fa-award"></i></div>
                 <h3>مسيرة المستشفى</h3>
-                <p>تعرف على تاريخ ورؤية مستشفى ابن سينا وإنجازاتنا في تقديم الرعاية الصحية.</p>
-            </div>
+                <p>تعرف على تاريخ ورؤية مستشفى ابن سينا، الأرقام والإنجازات والتخصصات المتاحة.</p>
+            </a>
 
             <a href="#all-schedules" class="main-card">
                 <div class="main-card-icon"><i class="fa-solid fa-calendar-days"></i></div>
                 <h3>جدول العيادات</h3>
-                <p>استعراض مواعيد وأيام عمل جميع الأطباء في كافة التخصصات المتاحة.</p>
+                <p>استعراض مواعيد وأيام عمل جميع الأطباء في كافة العيادات الخارجية المتاحة.</p>
             </a>
         </div>
 
-        <!-- جميع جداول العيادات المتاحة -->
+        <!-- ==================== قسم مسيرة المستشفى ==================== -->
+        <div class="about-section" id="hospital-history">
+            <h2 class="section-title"><i class="fa-solid fa-hospital"></i> مسيرة مستشفى ابن سينا</h2>
+            
+            <div class="about-text">
+                تعتبر مستشفى ابن سينا منظومة وصرح طبي متكامل لتكون السباقة في تقديم الخدمات الطبية بالعاشر من رمضان والمدن المحيطة. تقوم تقديم الخدمات العلاجية والوقائية المتميزة بأحدث الأجهزة الطبية المختلفة، وبذلك تقدم أفضل خدمة ممكنة لإرضاء عملائها والعناية بهم. تعمل المستشفى على مدار 24 ساعة بأعلى مستوى إداري وخدمي، وتضم طواقم عمل ذات كفاءة عالية تشمل نخبة من الأساتذة والاستشاريين بكليات الطب في كافة التخصصات يصل عددهم إلى 500 طبيب تقريباً، يعملون تحت إشرافهم فريق من التمريض عالِ التدريب والاحترافية.
+            </div>
+
+            <!-- المستشفى في أرقام -->
+            <h3 style="color: #0056b3; margin-top: 20px;"><i class="fa-solid fa-chart-line"></i> المستشفى في أرقام</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="num">2005</span>
+                    <span class="label">بدء خدمات المستشفى</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">1350 م²</span>
+                    <span class="label">مساحة المبنى</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">50 كم</span>
+                    <span class="label">المسافة من القاهرة</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">500</span>
+                    <span class="label">الطواقم الطبية</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">250</span>
+                    <span class="label">الكادر الإداري</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">81209</span>
+                    <span class="label">حالة دخول</span>
+                </div>
+            </div>
+
+            <!-- الرؤية والرسالة -->
+            <div class="vision-mission-grid">
+                <div class="vm-card">
+                    <h4><i class="fa-solid fa-eye"></i> رؤيتنا</h4>
+                    <p>التوسع في ريادة القطاع الصحي بمدينة العاشر من رمضان مع التحسين المستمر في تقديم الخدمة الطبية المتميزة.</p>
+                </div>
+                <div class="vm-card">
+                    <h4><i class="fa-solid fa-bullseye"></i> رسالتنا</h4>
+                    <p>تقديم خدمات طبية متكاملة وآمنة ذات معايير أخلاقية في بيئة احترافية بشكل يضمن سلامة المرضى وشركاء النجاح.</p>
+                </div>
+            </div>
+
+            <!-- أهدافنا -->
+            <h3 style="color: #0056b3; margin-top: 20px;"><i class="fa-solid fa-flag"></i> أهدافنا</h3>
+            <ul class="goals-list">
+                <li>أن نخدم كل مريض كما نخدم فرداً من أفراد عائلتنا.</li>
+                <li>أن ننتدب دوماً لمخاوف المريض وحاجته إلى بيئة عطوفة ودافئة وتوقعاته في الحصول على الخدمات بكل سهولة وسرعة.</li>
+                <li>أن نسعى دوماً إلى منح مرضانا تجربة شاملة تمتاز بالكفاءة والفاعلية.</li>
+                <li>تقديم الرعاية الملتزمة بأعلى معايير السلامة والجودة من أولوياتنا الثابتة في محيط عملنا.</li>
+            </ul>
+
+            <!-- قسم العيادات الخارجية والتخصصات -->
+            <h3 style="color: #0056b3; margin-top: 25px;"><i class="fa-solid fa-user-nurse"></i> تخصصات قسم العيادات الخارجية</h3>
+            <div class="specialties-tags">
+                <span class="tag">الباطنة</span>
+                <span class="tag">الجلدية</span>
+                <span class="tag">الأطفال</span>
+                <span class="tag">العظام</span>
+                <span class="tag">الرمد</span>
+                <span class="tag">المخ والأعصاب</span>
+                <span class="tag">النساء والتوليد</span>
+                <span class="tag">الأنف والأذن والحنجرة</span>
+                <span class="tag">الجهاز الهضمي والكبد</span>
+                <span class="tag">المسالك البولية</span>
+                <span class="tag">الغدة الدرقية</span>
+                <span class="tag">الغدد الصماء</span>
+                <span class="tag">القلب والقسطرة</span>
+                <span class="tag">الروماتيزم</span>
+                <span class="tag">أمراض الدم</span>
+                <span class="tag">علاج الأورام</span>
+                <span class="tag">الأسنان</span>
+                <span class="tag">العلاج الطبيعي</span>
+                <span class="tag">النفسية والعصبية</span>
+                <span class="tag">الأشعة التداخلية</span>
+                <span class="tag">الجراحة العامة</span>
+                <span class="tag">جراحة المخ والأعصاب</span>
+                <span class="tag">جراحة العمود الفقري</span>
+                <span class="tag">جراحة التجميل</span>
+                <span class="tag">جراحة الأوعية الدموية</span>
+                <span class="tag">جراحة القلب والصدر</span>
+                <span class="tag">السمعيات</span>
+                <span class="tag">التغذية</span>
+                <span class="tag">السمنة والنحافة</span>
+            </div>
+        </div>
+
+        <!-- ==================== قسم جدول العيادات ==================== -->
         <div id="all-schedules">
             
             <!-- 1. عيادة الباطنة -->
