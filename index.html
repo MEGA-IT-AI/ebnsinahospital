@@ -12,6 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* خلفية متدرجة ومتحركة بين الأزرق والأحمر */
         body {
             background: linear-gradient(-45deg, #0056b3, #d9534f, #0275d8, #c9302c);
             background-size: 400% 400%;
@@ -22,8 +23,6 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            position: relative;
-            overflow: hidden;
         }
 
         @keyframes gradientBG {
@@ -32,34 +31,35 @@
             100% { background-position: 0% 50%; }
         }
 
-        .bg-logo {
-            position: absolute;
-            width: 450px;
-            height: 450px;
-            z-index: 1;
-            opacity: 0.18;
-            animation: rotateLogo 25s linear infinite;
-            pointer-events: none;
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 520px;
+            width: 100%;
         }
 
-        .bg-logo img {
+        /* الشعار العالي أعلى المربع الأبيض */
+        .top-logo {
+            width: 140px;
+            height: 140px;
+            margin-bottom: -40px; /* تداخل خفيف مع المربع لإعطاء مظهر احترافي */
+            z-index: 3;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+        }
+
+        .top-logo img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
 
-        @keyframes rotateLogo {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
         .container {
-            background-color: rgba(255, 255, 255, 0.92);
-            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px 40px 40px; /* زيادة المسافة العلوية ليعطي المساحة للشعار */
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
             text-align: center;
-            max-width: 520px;
             width: 100%;
             backdrop-filter: blur(8px);
             position: relative;
@@ -130,26 +130,29 @@
 </head>
 <body>
 
-    <div class="bg-logo">
-        <img src="Logo HD.png" alt="شعار مستشفى ابن سينا">
-    </div>
-
-    <div class="container">
-        <h1>مرحباً بكم في مستشفى ابن سينا</h1>
-        <p>نحن هنا لرعايتكم وتقديم أفضل الخدمات الطبية المتميزة بأعلى معايير الجودة والراحة.</p>
-        
-        <div class="info-section">
-            <div class="info-item">
-                <span class="info-title">📍 العنوان:</span>
-                <span>العاشر من رمضان - المجاورة العاشر</span>
-            </div>
-            <div class="info-item">
-                <span class="info-title">📞 أرقام التواصل:</span>
-                <span class="phone-numbers">01222243156 / 01222243157</span>
-            </div>
+    <div class="main-wrapper">
+        <!-- الصورة أعلى المربع الأبيض -->
+        <div class="top-logo">
+            <img src="Logo HD.png" alt="شعار مستشفى ابن سينا">
         </div>
 
-        <a href="#" class="btn">الدخول للموقع</a>
+        <div class="container">
+            <h1>مرحباً بكم في مستشفى ابن سينا</h1>
+            <p>نحن هنا لرعايتكم وتقديم أفضل الخدمات الطبية المتميزة بأعلى معايير الجودة والراحة.</p>
+            
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-title">📍 العنوان:</span>
+                    <span>العاشر من رمضان - المجاورة العاشر</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-title">📞 أرقام التواصل:</span>
+                    <span class="phone-numbers">01222243156 / 01222243157</span>
+                </div>
+            </div>
+
+            <a href="#" class="btn">الدخول للموقع</a>
+        </div>
     </div>
 
 </body>
