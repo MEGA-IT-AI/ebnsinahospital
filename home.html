@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مستشفى ابن سينا - مسيرة المستشفى وجدول العيادات</title>
+    <title>مستشفى ابن سينا - مسيرة المستشفى والشركات المتعاقدة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -80,18 +80,18 @@
             gap: 10px;
         }
 
-        /* الأيقونتان الأساسيتان */
+        /* الأيقونات الأساسية العلوية */
         .main-cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
             margin-bottom: 40px;
         }
 
         .main-card {
             background: white;
             border-radius: 12px;
-            padding: 30px 20px;
+            padding: 25px 20px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
@@ -108,24 +108,24 @@
         }
 
         .main-card-icon {
-            font-size: 45px;
+            font-size: 40px;
             color: #0056b3;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .main-card h3 {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 8px;
             color: #0056b3;
         }
 
         .main-card p {
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* تنسيقات قسم مسيرة المستشفى */
-        .about-section {
+        /* قسم مسيرة المستشفى */
+        .about-section, .companies-section {
             background: white;
             padding: 30px;
             border-radius: 12px;
@@ -233,6 +233,32 @@
             font-weight: 600;
         }
 
+        /* تنسيقات قسم الشركات المتعاقد معها */
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .company-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-right: 3px solid #0056b3;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .company-item i {
+            color: #0056b3;
+            font-size: 12px;
+        }
+
         /* تنسيقات الجداول */
         .schedule-section {
             background: white;
@@ -321,18 +347,24 @@
             <p>أهلاً بكم في مستشفى ابن سينا بالعاشر من رمضان - خدمة طبية متميزة</p>
         </div>
 
-        <!-- الأيقونتان الأساسيتان -->
+        <!-- الأيقونات الرئيسية العلوية -->
         <div class="main-cards-grid">
             <a href="#hospital-history" class="main-card">
                 <div class="main-card-icon"><i class="fa-solid fa-award"></i></div>
                 <h3>مسيرة المستشفى</h3>
-                <p>تعرف على تاريخ ورؤية مستشفى ابن سينا، الأرقام والإنجازات والتخصصات المتاحة.</p>
+                <p>تعرف على تاريخ ورؤية مستشفى ابن سينا والأرقام والإنجازات.</p>
+            </a>
+
+            <a href="#contracted-companies" class="main-card">
+                <div class="main-card-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>الشركات المتعاقد معها</h3>
+                <p>دليل الشركات، الهيئات، النقابات، وشركات التأمين الصحي المتعاقدة معنا.</p>
             </a>
 
             <a href="#all-schedules" class="main-card">
                 <div class="main-card-icon"><i class="fa-solid fa-calendar-days"></i></div>
                 <h3>جدول العيادات</h3>
-                <p>استعراض مواعيد وأيام عمل جميع الأطباء في كافة العيادات الخارجية المتاحة.</p>
+                <p>استعراض مواعيد وأيام عمل جميع الأطباء في كافة العيادات الخارجية.</p>
             </a>
         </div>
 
@@ -426,6 +458,135 @@
                 <span class="tag">السمعيات</span>
                 <span class="tag">التغذية</span>
                 <span class="tag">السمنة والنحافة</span>
+            </div>
+        </div>
+
+        <!-- ==================== قسم الشركات المتعاقد معها ==================== -->
+        <div class="companies-section" id="contracted-companies">
+            <h2 class="section-title"><i class="fa-solid fa-building-user"></i> الشركات والجهات المتعاقد معها</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">سابقة أعمال مستشفى ابن سينا - العاشر من رمضان</p>
+
+            <div class="companies-grid">
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة فريش وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أليكو METLIFE</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة تكنو ماستر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الكهرباء وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أكسـا مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة جيد تكستايل وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> مجلس الدفاع الوطني وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة جلوب ميد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ستار جلاس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إبيكو وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدى كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة نيو سيتي جلاس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مصر أوتسوكا وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميد رايت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> فندق ماريتا</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> مجموعة السويدى إليكتريك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> هايبر وان</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة السويدى إليكتريك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة الأطباء</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الماسية DMS</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> الشركة السعودية المصرية للأملاح</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المهندسين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيجي كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مطبعة المهندسين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المحامين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سمارت كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مينا فارم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة التطبيقيين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة نكست كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميديكال إكسبرتس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المعلمين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الأهلي للمشروعات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة شفائى كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المهن الزراعية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة يوني كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة اتش كيميكال وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المهن العلمية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أوميجا كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أتلانتك وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> النقابة العامة لذوى الاحتياجات الخاصة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميد نت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إنسوتك وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المعاشات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المشرق</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة بلوك الصناعية وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> وزارة الآثار</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة هيلث اند ويلث</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> دار المدينة المنورة وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة عناية مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> العاملين المدنيين بوزارة الدفاع</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدكوم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سيلفر إيدج</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أليانز</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مارسو</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة بى سيف ميديكال</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة دار الإطفاء</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سافكو</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أنتر باك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الإمبراطور</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة نيوفاين باك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الاستشاريون</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيلف</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدى كونسلت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الكرامة مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سيف هيلث كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة قنديل للصلب</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدى جولد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> الشركة العالمية للخدمات الطبية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميد شور</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة العربية جروب</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المستقبل للرعاية الصحية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الضحى وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سياف للاستشارات المالية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة العاشر للصناعات الالكترونية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة كير بلس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> النقابة العامة للنقل والمواصلات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مصر هيلث كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> الاتحاد المحلي لعمال العاشر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة تراى كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الأمين للفلاتر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ترايستار</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الحياة لتسويق الخدمات الطبية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة رويال كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الهندسة للانشاءات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> اتحاد حدائق المهندسين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أكسون للحلول المتكاملة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ألبو مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الأهلي نقدى</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المدينة للبلاستيك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الدلتا للتأمين على الحياة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المصرية الإماراتية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة قناة السويس للتأمين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مصر لتأمينات الحياة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة كليك مير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيجبت كن</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة النخلة تكس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة النساجون المتحدون</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة تراست للخدمات الطبية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيزى لايف</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة بتروتريد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ثرى برازرز</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> فرو إيجبت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> بنك ميد بنك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> جمعية الحسنات الخيرية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أمان</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> بنك الاستثمار العربي</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> جمعية نهر الحياة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> فور يو</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> روشتة أون لاين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة صيدليتى</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المجد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> ستاركو الحديثة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة صحتى (سمارت كير نقدي)</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة فرانس ميتال وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> قباني للأثاث</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة طيف وود للأثاث</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الصفا والمروة للمقاولات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> بناه المستقبل</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> مؤسسة عمال مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة يونيفيرسال للتعبئة والتغليف</div>
             </div>
         </div>
 
