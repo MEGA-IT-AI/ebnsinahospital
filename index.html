@@ -23,6 +23,8 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+            overflow: hidden;
         }
 
         @keyframes gradientBG {
@@ -31,15 +33,37 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* اللوجو الشفاف والمتحرك في الخلفية */
+        .bg-logo {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-image: url('Logo HD.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.15; /* نسبة الشفافية */
+            z-index: 1;
+            animation: rotateLogo 25s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotateLogo {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         .container {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.92);
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
             text-align: center;
             max-width: 520px;
             width: 100%;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
@@ -106,6 +130,9 @@
 </head>
 <body>
 
+    <!-- الشعار الشفاف المتحرك -->
+    <div class="bg-logo"></div>
+
     <div class="container">
         <h1>مرحباً بكم في مستشفى ابن سينا</h1>
         <p>نحن هنا لرعايتكم وتقديم أفضل الخدمات الطبية المتميزة بأعلى معايير الجودة والراحة.</p>
@@ -117,7 +144,7 @@
             </div>
             <div class="info-item">
                 <span class="info-title">📞 أرقام التواصل:</span>
-                <span class="phone-numbers">012222431556 / 01222243157</span>
+                <span class="phone-numbers">01222243156 / 01222243157</span>
             </div>
         </div>
 
