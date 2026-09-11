@@ -83,13 +83,12 @@
             background-color: #f8f9fa;
             border-radius: 8px;
             padding: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             border-right: 4px solid #0056b3;
             text-align: right;
         }
 
         .info-item {
-            margin-bottom: 10px;
             font-size: 15px;
             color: #333;
             display: flex;
@@ -97,21 +96,25 @@
             gap: 8px;
         }
 
-        .info-item:last-child {
-            margin-bottom: 0;
-        }
-
         .info-title {
             font-weight: bold;
             color: #0056b3;
         }
 
-        /* أزرار الاتصال داخل المربع */
-        .contact-buttons {
+        .section-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 8px;
+            text-align: right;
+        }
+
+        /* تنسيق أزرار الاتصال والواتساب داخل المربع */
+        .contact-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 15px;
         }
 
         .action-btn {
@@ -119,11 +122,12 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 12px;
+            padding: 10px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             color: white;
+            font-size: 14px;
             transition: transform 0.2s ease;
         }
 
@@ -131,12 +135,12 @@
             transform: translateY(-2px);
         }
 
-        .btn-whatsapp {
-            background-color: #25d366;
-        }
-
         .btn-call {
             background-color: #0275d8;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
         }
 
         .btn {
@@ -149,13 +153,14 @@
             font-weight: bold;
             transition: background-color 0.3s ease;
             width: 100%;
+            margin-top: 10px;
         }
 
         .btn:hover {
             background-color: #003d82;
         }
 
-        /* الأزرار الثابتة العائمة أسفل الشاشة */
+        /* الأزرار العائمة أسفل الشاشة */
         .floating-buttons {
             position: fixed;
             bottom: 20px;
@@ -189,7 +194,7 @@
         }
 
         .float-call {
-            background-color: #0056b3;
+            background-color: #0275d8;
         }
     </style>
 </head>
@@ -211,13 +216,25 @@
                 </div>
             </div>
 
-            <!-- أزرار التفاعل داخل البطاقة -->
-            <div class="contact-buttons">
-                <a href="https://wa.me/201222243156" target="_blank" class="action-btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> واتساب: 01222243156
+            <!-- أزرار الاتصال المباشر -->
+            <div class="section-title">📞 للاتصال الهاتفي السريع:</div>
+            <div class="contact-group">
+                <a href="tel:01222243156" class="action-btn btn-call">
+                    <i class="fa-solid fa-phone"></i> اتصال بالمحيط الأول (01222243156)
                 </a>
                 <a href="tel:01222243157" class="action-btn btn-call">
-                    <i class="fa-solid fa-phone"></i> اتصال: 01222243157
+                    <i class="fa-solid fa-phone"></i> اتصال بالمحيط الثاني (01222243157)
+                </a>
+            </div>
+
+            <!-- أزرار الواتساب -->
+            <div class="section-title">💬 للمراسلة عبر الواتساب:</div>
+            <div class="contact-group">
+                <a href="https://wa.me/201222243156" target="_blank" class="action-btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> واتساب (01222243156)
+                </a>
+                <a href="https://wa.me/201222243157" target="_blank" class="action-btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> واتساب (01222243157)
                 </a>
             </div>
 
@@ -225,12 +242,12 @@
         </div>
     </div>
 
-    <!-- الأزرار العائمة أسفل اليسار -->
+    <!-- أزرار عائمة أسفل يسار الشاشة لتسهيل الوصول الفوري -->
     <div class="floating-buttons">
-        <a href="https://wa.me/201222243156" target="_blank" class="float-btn float-whatsapp" title="تواصل عبر الواتساب">
+        <a href="https://wa.me/201222243156" target="_blank" class="float-btn float-whatsapp" title="مراسلة واتساب">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="tel:01222243157" class="float-btn float-call" title="اتصل بنا">
+        <a href="tel:01222243157" class="float-btn float-call" title="اتصال هاتفي">
             <i class="fa-solid fa-phone"></i>
         </a>
     </div>
