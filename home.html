@@ -1,574 +1,2487 @@
-<!-- ==================== الجداول الجديدة المضافة ==================== -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشفى ابن سينا - مسيرة المستشفى والشركات المتعاقدة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<!-- 8. عيادة الجلدية -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-allergies"></i> جدول مواعيد عيادة الجلدية</h2>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ منصور إبراهيم</td>
-                    <td><span class="badge-time">1.30 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">1.30 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">1.30 م</span></td>
-                    <td><span class="badge-time">1.30 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أميرة منير</td>
-                    <td><span class="badge-time">6.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ ثروت إسكندر</td>
-                    <td><span class="badge-time">11.30 ص</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">11.30 ص</span></td>
-                    <td><span class="badge-time">11.00 ص</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ سامي فؤاد</td>
-                    <td>—</td>
-                    <td><span class="badge-time">8.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ وسام مصطفى</td>
-                    <td>—</td>
-                    <td><span class="badge-time">4.30 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">7.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ السيد فؤاد</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">4.00 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">4.00 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ نهى الهلباوي</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">10.00 ص</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أحمد أبو زيد</td>
-                    <td>—</td>
-                    <td><span class="badge-time">1.30 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">1.30 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أمير الشرقاوي</td>
-                    <td><span class="badge-time">7.30 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">7.30 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
 
-<!-- 9. عيادة الجهاز الهضمي والباطنة -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-notes-medical"></i> جدول مواعيد عيادة الجهاز الهضمي والباطنة</h2>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ رفعت محسن</td>
-                    <td>—</td>
-                    <td><span class="badge-time">10.00 ص</span></td>
-                    <td><span class="badge-time">11.00 ص</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ شريف سويلم</td>
-                    <td><span class="badge-time">5.00 م</span></td>
-                    <td><span class="badge-time">11 ص / 5 م</span></td>
-                    <td><span class="badge-time">5.30 م</span></td>
-                    <td><span class="badge-time">1.30 م / 5 م</span></td>
-                    <td><span class="badge-time">5.00 م</span></td>
-                    <td><span class="badge-time">11 ص / 5 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أحمد فؤاد</td>
-                    <td>—</td>
-                    <td><span class="badge-time">7.00 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">6.00 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">5.30 م</span></td>
-                    <td><span class="badge-time">2.00 م</span></td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ وئام إبراهيم</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">10.00 ص</span></td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-<!-- 10. عيادة الحساسية والمناعة -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-shield-virus"></i> جدول مواعيد عيادة الحساسية والمناعة</h2>
-    <p style="text-align: center; color: #666; font-size: 13px; margin-bottom: 10px;">الحجز طوال أيام الأسبوع</p>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ شيرين عاطف بيومي</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">12.00 ظ</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-<!-- 11. عيادة الرمد -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-eye"></i> جدول مواعيد عيادة الرمد</h2>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ أمل عمران</td>
-                    <td><span class="badge-time">2.00 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">2.30 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">1.00 م</span></td>
-                    <td><span class="badge-time">1.00 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ عصام صلاح</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">10.00 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ رنا محمد</td>
-                    <td>—</td>
-                    <td><span class="badge-time">9.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أحمد يحيى</td>
-                    <td>—</td>
-                    <td><span class="badge-time">7.30 م</span></td>
-                    <td><span class="badge-time">8.30 م</span></td>
-                    <td><span class="badge-time">8.00 م</span></td>
-                    <td><span class="badge-time">8.00 م</span></td>
-                    <td><span class="badge-time">8.00 م</span></td>
-                    <td><span class="badge-time">4.00 م</span></td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ محمود بهنسي</td>
-                    <td><span class="badge-time">3.30 م</span></td>
-                    <td><span class="badge-time">1.00 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">1.00 م</span></td>
-                    <td><span class="badge-time">3.00 م</span></td>
-                    <td><span class="badge-time">2.30 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ مصطفى فتح الباب</td>
-                    <td><span class="badge-time">7.00 م</span></td>
-                    <td><span class="badge-time">4.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ عمرو مصطفى</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">5.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        .logo-area img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
 
-<!-- 12. عيادة الروماتيزم وأمراض المفاصل -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-bone"></i> جدول عيادة الروماتيزم وأمراض المفاصل</h2>
-    <p style="text-align: center; color: #666; font-size: 13px; margin-bottom: 10px;">الحجز طوال أيام الأسبوع</p>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ يسرا عبد البر (رسم العصب)</td>
-                    <td><span class="badge-time">11.00 ص</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">4.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
 
-<!-- 13. عيادة السمعيات -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-ear-deaf"></i> جدول مواعيد عيادة السمعيات</h2>
-    <p style="text-align: center; color: #666; font-size: 13px; margin-bottom: 10px;">الحجز طوال أيام الأسبوع</p>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ نهلة جاد</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">11.00 ص</span></td>
-                    <td><span class="badge-time">1.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        .container {
+            max-width: 1150px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
 
-<!-- 14. عيادة جراحات السمنة -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-weight-scale"></i> جدول مواعيد عيادة جراحات السمنة</h2>
-    <p style="text-align: center; color: #666; font-size: 13px; margin-bottom: 10px;">الحجز طوال أيام الأسبوع</p>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ محمد معروف</td>
-                    <td><span class="badge-time">7.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        .welcome-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #0056b3;
+        }
 
-<!-- 15. الأشعة التليفزيونية (السونار) -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-wave-square"></i> جدول الأشعة التليفزيونية (السونار)</h2>
-    <p style="text-align: center; color: #666; font-size: 13px; margin-bottom: 10px;">الحجز بالحضور في ميعاد العيادة</p>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ محمد الفوال</td>
-                    <td>—</td>
-                    <td><span class="badge-time">2.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">2.00 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ سامح عوض</td>
-                    <td><span class="badge-time">10 ص : 7 م</span></td>
-                    <td><span class="badge-time">10 ص : 1 م</span><span class="badge-time">3 م : 7 م</span></td>
-                    <td><span class="badge-time">10 ص : 3 م</span></td>
-                    <td><span class="badge-time">10 ص : 1 م</span><span class="badge-time">3 م : 7 م</span></td>
-                    <td><span class="badge-time">1 م : 5 م</span></td>
-                    <td><span class="badge-time">3 م : 7 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ سمر عصام</td>
-                    <td><span class="badge-time">7 م : 11 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ لطيفة عصام</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">7 م : 11 م</span></td>
-                    <td>—</td>
-                    <td><span class="badge-time">7 م : 11 م</span></td>
-                    <td><span class="badge-time">7 م : 11 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ مروة عبد النبي</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">3 م : 5 م</span></td>
-                    <td><span class="badge-time">7 م : 11 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أسماء سامي</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">10 ص : 1 م</span></td>
-                    <td><span class="badge-time">10 ص : 1 م</span></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أحمد عادل</td>
-                    <td>—</td>
-                    <td><span class="badge-time">7 م : 11 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ خالد عويضة</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">5 م : 7 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        .section-title {
+            color: #0056b3;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
 
-<!-- 16. عيادة الصدر -->
-<div class="schedule-section">
-    <h2 class="section-title"><i class="fa-solid fa-lungs"></i> جدول مواعيد عيادة الصدر</h2>
-    <p style="text-align: center; color: #666; font-size: 13px; margin-bottom: 10px;">الحجز طوال أيام الأسبوع</p>
-    <div style="overflow-x:auto;">
-        <table>
-            <thead>
-                <tr>
-                    <th>الطبيب المعالج</th>
-                    <th>السبت</th>
-                    <th>الأحد</th>
-                    <th>الأثنين</th>
-                    <th>الثلاثاء</th>
-                    <th>الأربعاء</th>
-                    <th>الخميس</th>
-                    <th>الجمعة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="doc-name">د/ طارق حمدي</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">10.00 ص</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ منذر رفقي</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">5.00 م</span></td>
-                    <td><span class="badge-time">12.00 ظ</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ رضا الغمري</td>
-                    <td><span class="badge-time">11.00 ص</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">11.00 ص</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td class="doc-name">د/ أحمد عادل</td>
-                    <td><span class="badge-time">4.00 م</span></td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td>—</td>
-                    <td><span class="badge-time">5.00 م</span></td>
-                    <td>—</td>
-                </tr>
-            </tbody>
-        </table>
+        /* الأيقونات الأساسية العلوية */
+        .main-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid #eee;
+        }
+
+        .main-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+            border-color: #0056b3;
+        }
+
+        .main-card-icon {
+            font-size: 40px;
+            color: #0056b3;
+            margin-bottom: 12px;
+        }
+
+        .main-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #0056b3;
+        }
+
+        .main-card p {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* قسم مسيرة المستشفى */
+        .about-section, .companies-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            scroll-margin-top: 80px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 25px;
+            color: #444;
+            background: #f8f9fa;
+            padding: 20px;
+            border-right: 4px solid #0056b3;
+            border-radius: 4px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .stat-box {
+            background: #0056b3;
+            color: white;
+            padding: 20px 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box .num {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #ffeb3b;
+        }
+
+        .stat-box .label {
+            font-size: 14px;
+        }
+
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .vm-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .vm-card h4 {
+            color: #0056b3;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .goals-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .goals-list li {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .goals-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: #0056b3;
+        }
+
+        .specialties-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: #e3f2fd;
+            color: #0d47a1;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* تنسيقات قسم الشركات المتعاقد معها */
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .company-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-right: 3px solid #0056b3;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .company-item i {
+            color: #0056b3;
+            font-size: 12px;
+        }
+
+        /* تنسيقات الجداول */
+        .schedule-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 35px;
+            scroll-margin-top: 80px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        table th, table td {
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+
+        table th {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .badge-time {
+            display: block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            margin: 2px 0;
+            white-space: nowrap;
+        }
+
+        .doc-name {
+            font-weight: bold;
+            color: #0056b3;
+            white-space: nowrap;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #003d82;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="Logo HD.png" alt="شعار المستشفى">
+            <span>مستشفى ابن سينا</span>
+        </div>
+        <nav>
+            <a href="index.html">الصفحة الرئيسية</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="welcome-card">
+            <h2>بوابة الخدمات الطبية الشاملة</h2>
+            <p>أهلاً بكم في مستشفى ابن سينا بالعاشر من رمضان - خدمة طبية متميزة</p>
+        </div>
+
+        <!-- الأيقونات الرئيسية العلوية -->
+        <div class="main-cards-grid">
+            <a href="#hospital-history" class="main-card">
+                <div class="main-card-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>مسيرة المستشفى</h3>
+                <p>تعرف على تاريخ ورؤية مستشفى ابن سينا والأرقام والإنجازات.</p>
+            </a>
+
+            <a href="#contracted-companies" class="main-card">
+                <div class="main-card-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>الشركات المتعاقد معها</h3>
+                <p>دليل الشركات، الهيئات، النقابات، وشركات التأمين الصحي المتعاقدة معنا.</p>
+            </a>
+
+            <a href="#all-schedules" class="main-card">
+                <div class="main-card-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <h3>جدول العيادات</h3>
+                <p>استعراض مواعيد وأيام عمل جميع الأطباء في كافة العيادات الخارجية.</p>
+            </a>
+        </div>
+
+        <!-- ==================== قسم مسيرة المستشفى ==================== -->
+        <div class="about-section" id="hospital-history">
+            <h2 class="section-title"><i class="fa-solid fa-hospital"></i> مسيرة مستشفى ابن سينا</h2>
+            
+            <div class="about-text">
+                تعتبر مستشفى ابن سينا منظومة وصرح طبي متكامل لتكون السباقة في تقديم الخدمات الطبية بالعاشر من رمضان والمدن المحيطة. تقوم تقديم الخدمات العلاجية والوقائية المتميزة بأحدث الأجهزة الطبية المختلفة، وبذلك تقدم أفضل خدمة ممكنة لإرضاء عملائها والعناية بهم. تعمل المستشفى على مدار 24 ساعة بأعلى مستوى إداري وخدمي، وتضم طواقم عمل ذات كفاءة عالية تشمل نخبة من الأساتذة والاستشاريين بكليات الطب في كافة التخصصات يصل عددهم إلى 500 طبيب تقريباً، يعملون تحت إشرافهم فريق من التمريض عالِ التدريب والاحترافية.
+            </div>
+
+            <!-- المستشفى في أرقام -->
+            <h3 style="color: #0056b3; margin-top: 20px;"><i class="fa-solid fa-chart-line"></i> المستشفى في أرقام</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="num">2005</span>
+                    <span class="label">بدء خدمات المستشفى</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">1350 م²</span>
+                    <span class="label">مساحة المبنى</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">50 كم</span>
+                    <span class="label">المسافة من القاهرة</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">500</span>
+                    <span class="label">الطواقم الطبية</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">250</span>
+                    <span class="label">الكادر الإداري</span>
+                </div>
+                <div class="stat-box">
+                    <span class="num">81209</span>
+                    <span class="label">حالة دخول</span>
+                </div>
+            </div>
+
+            <!-- الرؤية والرسالة -->
+            <div class="vision-mission-grid">
+                <div class="vm-card">
+                    <h4><i class="fa-solid fa-eye"></i> رؤيتنا</h4>
+                    <p>التوسع في ريادة القطاع الصحي بمدينة العاشر من رمضان مع التحسين المستمر في تقديم الخدمة الطبية المتميزة.</p>
+                </div>
+                <div class="vm-card">
+                    <h4><i class="fa-solid fa-bullseye"></i> رسالتنا</h4>
+                    <p>تقديم خدمات طبية متكاملة وآمنة ذات معايير أخلاقية في بيئة احترافية بشكل يضمن سلامة المرضى وشركاء النجاح.</p>
+                </div>
+            </div>
+
+            <!-- أهدافنا -->
+            <h3 style="color: #0056b3; margin-top: 20px;"><i class="fa-solid fa-flag"></i> أهدافنا</h3>
+            <ul class="goals-list">
+                <li>أن نخدم كل مريض كما نخدم فرداً من أفراد عائلتنا.</li>
+                <li>أن ننتدب دوماً لمخاوف المريض وحاجته إلى بيئة عطوفة ودافئة وتوقعاته في الحصول على الخدمات بكل سهولة وسرعة.</li>
+                <li>أن نسعى دوماً إلى منح مرضانا تجربة شاملة تمتاز بالكفاءة والفاعلية.</li>
+                <li>تقديم الرعاية الملتزمة بأعلى معايير السلامة والجودة من أولوياتنا الثابتة في محيط عملنا.</li>
+            </ul>
+
+            <!-- قسم العيادات الخارجية والتخصصات -->
+            <h3 style="color: #0056b3; margin-top: 25px;"><i class="fa-solid fa-user-nurse"></i> تخصصات قسم العيادات الخارجية</h3>
+            <div class="specialties-tags">
+                <span class="tag">الباطنة</span>
+                <span class="tag">الجلدية</span>
+                <span class="tag">الأطفال</span>
+                <span class="tag">العظام</span>
+                <span class="tag">الرمد</span>
+                <span class="tag">المخ والأعصاب</span>
+                <span class="tag">النساء والتوليد</span>
+                <span class="tag">الأنف والأذن والحنجرة</span>
+                <span class="tag">الجهاز الهضمي والكبد</span>
+                <span class="tag">المسالك البولية</span>
+                <span class="tag">الغدة الدرقية</span>
+                <span class="tag">الغدد الصماء</span>
+                <span class="tag">القلب والقسطرة</span>
+                <span class="tag">الروماتيزم</span>
+                <span class="tag">أمراض الدم</span>
+                <span class="tag">علاج الأورام</span>
+                <span class="tag">الأسنان</span>
+                <span class="tag">العلاج الطبيعي</span>
+                <span class="tag">النفسية والعصبية</span>
+                <span class="tag">الأشعة التداخلية</span>
+                <span class="tag">الجراحة العامة</span>
+                <span class="tag">جراحة المخ والأعصاب</span>
+                <span class="tag">جراحة العمود الفقري</span>
+                <span class="tag">جراحة التجميل</span>
+                <span class="tag">جراحة الأوعية الدموية</span>
+                <span class="tag">جراحة القلب والصدر</span>
+                <span class="tag">السمعيات</span>
+                <span class="tag">التغذية</span>
+                <span class="tag">السمنة والنحافة</span>
+                <span class="tag">الحساسية والمناعة</span>
+                <span class="tag">الصدر</span>
+                <span class="tag">الأشعة التليفزيونية (السونار)</span>
+            </div>
+        </div>
+
+        <!-- ==================== قسم الشركات المتعاقد معها ==================== -->
+        <div class="companies-section" id="contracted-companies">
+            <h2 class="section-title"><i class="fa-solid fa-building-user"></i> الشركات والجهات المتعاقد معها</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">سابقة أعمال مستشفى ابن سينا - العاشر من رمضان</p>
+
+            <div class="companies-grid">
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة فريش وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أليكو METLIFE</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة تكنو ماستر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الكهرباء وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أكسـا مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة جيد تكستايل وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> مجلس الدفاع الوطني وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة جلوب ميد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ستار جلاس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إبيكو وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدى كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة نيو سيتي جلاس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مصر أوتسوكا وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميد رايت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> فندق ماريتا</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> مجموعة السويدى إليكتريك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> هايبر وان</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة السويدى إليكتريك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة الأطباء</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الماسية DMS</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> الشركة السعودية المصرية للأملاح</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المهندسين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيجي كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مطبعة المهندسين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المحامين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سمارت كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مينا فارم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة التطبيقيين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة نكست كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميديكال إكسبرتس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المعلمين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الأهلي للمشروعات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة شفائى كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المهن الزراعية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة يوني كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة اتش كيميكال وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المهن العلمية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أوميجا كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أتلانتك وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> النقابة العامة لذوى الاحتياجات الخاصة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميد نت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إنسوتك وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> نقابة المعاشات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المشرق</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة بلوك الصناعية وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> وزارة الآثار</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة هيلث اند ويلث</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> دار المدينة المنورة وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة عناية مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> العاملين المدنيين بوزارة الدفاع</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدكوم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سيلفر إيدج</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أليانز</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مارسو</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة بى سيف ميديكال</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة دار الإطفاء</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سافكو</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أنتر باك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الإمبراطور</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة نيوفاين باك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الاستشاريون</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيلف</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدى كونسلت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الكرامة مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سيف هيلث كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة قنديل للصلب</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميدى جولد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> الشركة العالمية للخدمات الطبية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ميد شور</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة العربية جروب</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المستقبل للرعاية الصحية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الضحى وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة سياف للاستشارات المالية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة العاشر للصناعات الالكترونية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة كير بلس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> النقابة العامة للنقل والمواصلات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مصر هيلث كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> الاتحاد المحلي لعمال العاشر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة تراى كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الأمين للفلاتر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ترايستار</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الحياة لتسويق الخدمات الطبية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة رويال كير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الهندسة للانشاءات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> اتحاد حدائق المهندسين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أكسون للحلول المتكاملة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ألبو مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الأهلي نقدى</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المدينة للبلاستيك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الدلتا للتأمين على الحياة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المصرية الإماراتية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة قناة السويس للتأمين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة مصر لتأمينات الحياة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة كليك مير</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيجبت كن</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة النخلة تكس</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة النساجون المتحدون</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة تراست للخدمات الطبية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة إيزى لايف</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة بتروتريد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة ثرى برازرز</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> فرو إيجبت</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> بنك ميد بنك</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> جمعية الحسنات الخيرية</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة أمان</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> بنك الاستثمار العربي</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> جمعية نهر الحياة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> فور يو</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> روشتة أون لاين</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة صيدليتى</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة المجد</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> ستاركو الحديثة</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة صحتى (سمارت كير نقدي)</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة فرانس ميتال وأسرهم</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> قباني للأثاث</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة طيف وود للأثاث</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة الصفا والمروة للمقاولات</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> بناه المستقبل</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> مؤسسة عمال مصر</div>
+                <div class="company-item"><i class="fa-solid fa-check"></i> شركة يونيفيرسال للتعبئة والتغليف</div>
+            </div>
+        </div>
+
+        <!-- ==================== قسم جدول العيادات ==================== -->
+        <div id="all-schedules">
+            
+            <!-- 1. عيادة الباطنة -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-stethoscope"></i> جدول مواعيد عيادة الباطنة</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ خالد السحار</td>
+                                <td><span class="badge-time">9.30 م</span></td>
+                                <td><span class="badge-time">9.30 م</span></td>
+                                <td><span class="badge-time">2.30 / 9.30 م</span></td>
+                                <td><span class="badge-time">2.30 / 9.30 م</span></td>
+                                <td><span class="badge-time">2.30 / 9.30 م</span></td>
+                                <td><span class="badge-time">3 / 9.30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ ماريا</td>
+                                <td><span class="badge-time">9.30 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9.30 ص</span></td>
+                                <td><span class="badge-time">9.30 ص</span></td>
+                                <td><span class="badge-time">9.30 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أمجد صبحي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ صبحي صديق</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12.00 ظ</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ رضا المنسي</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد عبد الفتاح</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عبد النبي السيد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9.30 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2. عيادة الأسنان -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-tooth"></i> جدول مواعيد عيادة الأسنان</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمد الغريب</td>
+                                <td><span class="badge-time">9 ص : 2 م</span></td>
+                                <td><span class="badge-time">5 م : 10 م</span></td>
+                                <td><span class="badge-time">9 ص : 2 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">9 ص : 2 م</span><span class="badge-time">6 م : 10 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ نادين عبدالرازق</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2 م : 5 م</span></td>
+                                <td><span class="badge-time">2 م : 4 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ مريم عبدالعزيز</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9 ص : 2 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م : 7 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7 م : 10 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عبدالله ابوالفتوح</td>
+                                <td><span class="badge-time">3 م : 6 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7 م : 10 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عبدالله عيسوى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4 م : 7 م</span></td>
+                                <td><span class="badge-time">10 ص : 2 م</span></td>
+                                <td><span class="badge-time">4 م : 6 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ ميسرة سماحة</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7 م : 10 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">2 م : 4 م</span></td>
+                                <td><span class="badge-time">9.30 ص : 1 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد مجدى</td>
+                                <td><span class="badge-time">6 م : 10 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3 م : 7 م</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 3. عيادة الأطفال -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-baby"></i> جدول مواعيد عيادة الأطفال</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ عفت سليم</td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عزة رشاد</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد عبد الصمد</td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ منصور أباظه</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12.00 ظ</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ إسراء السيد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ نسرين عبدالرازق</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ إيمان الحسيني</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ خلود العوضي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أمل محمد</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 4. عيادة الأنف والأذن -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-ear-listen"></i> جدول مواعيد عيادة الأنف والأذن</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ أكرم زاهر</td>
+                                <td><span class="badge-time">9.00 م</span></td>
+                                <td><span class="badge-time">4 / 9 م</span></td>
+                                <td><span class="badge-time">3.30 / 9 م</span></td>
+                                <td><span class="badge-time">9.00 م</span></td>
+                                <td><span class="badge-time">4 / 9 م</span></td>
+                                <td><span class="badge-time">4 / 9 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد صبحي</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.30 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أشرف رأفت</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3.30 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد حسن سويد</td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد سالم</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 ظ</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 5. عيادة الباطنة والكلى -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-disease"></i> جدول مواعيد عيادة الباطنة والكلى</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمد سلامة</td>
+                                <td><span class="badge-time">2.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ آيات نصر</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ لطفي أبو العينين</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد الهجرسي</td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 6. عيادة الجهاز الهضمي والباطنة -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-apple-whole"></i> جدول مواعيد عيادة الجهاز الهضمي والباطنة</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ رفعت محسن</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ شريف سويلم</td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td><span class="badge-time">11 ص / 5 م</span></td>
+                                <td><span class="badge-time">5.30 م</span></td>
+                                <td><span class="badge-time">1.30 م / 5 م</span></td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td><span class="badge-time">11 ص / 5 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد فؤاد</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">5.30 م</span></td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ وئام إبراهيم</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 7. عيادة الجلدية -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-user-doctor"></i> جدول مواعيد عيادة الجلدية</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ منصور إبراهيم</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أميرة منير</td>
+                                <td><span class="badge-time">6.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ ثروت إسكندر</td>
+                                <td><span class="badge-time">11.30 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.30 ص</span></td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ سامي فؤاد</td>
+                                <td>—</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ وسام مصطفى</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ السيد فؤاد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ نهى الهلباوي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد أبو زيد</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أمير الشرقاوى</td>
+                                <td><span class="badge-time">7.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 8. عيادة الحساسية والمناعة -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> جدول مواعيد عيادة الحساسية والمناعة</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ شيرين عاطف بيومى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12.00 ظ</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 9. عيادة الرمد -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-eye"></i> جدول مواعيد عيادة الرمد</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ أمل عمران</td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عصام صلاح</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ رنا محمد</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد يحيى</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.30 م</span></td>
+                                <td><span class="badge-time">8.30 م</span></td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمود بهنسى</td>
+                                <td><span class="badge-time">3.30 م</span></td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td><span class="badge-time">3.00 م</span></td>
+                                <td><span class="badge-time">2.30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ مصطفى فتح الباب</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عمرو مصطفى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 10. عيادة الروماتيزم وأمراض المفاصل -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-bone"></i> جدول مواعيد عيادة الروماتيزم وأمراض المفاصل</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ يسرا عبد البر (رسم العصب)</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 11. عيادة السمعيات -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-ear-deaf"></i> جدول مواعيد عيادة السمعيات</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ نهلة جاد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td><span class="badge-time">1.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 12. عيادة جراحات السمنة -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-weight-scale"></i> جدول مواعيد عيادة جراحات السمنة</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمد معروف</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 13. عيادة الأشعة التليفزيونية (السونار) -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-wave-square"></i> جدول مواعيد عيادة الأشعة التليفزيونية (السونار)</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمد الفوال</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ سامح عوض</td>
+                                <td><span class="badge-time">10 ص : 7 م</span></td>
+                                <td><span class="badge-time">10 ص : 1 م</span><span class="badge-time">3 م : 7 م</span></td>
+                                <td><span class="badge-time">10 ص : 3 م</span></td>
+                                <td><span class="badge-time">10 ص : 1 م</span><span class="badge-time">3 م : 7 م</span></td>
+                                <td><span class="badge-time">1 م : 5 م</span></td>
+                                <td><span class="badge-time">3 م : 7 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ سمر عصام</td>
+                                <td><span class="badge-time">7 م : 11 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ لطيفة عصام</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7 م : 11 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7 م : 11 م</span></td>
+                                <td><span class="badge-time">7 م : 11 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ مروة عبد النبي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3 م : 5 م</span></td>
+                                <td><span class="badge-time">7 م : 11 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أسماء سامي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10 ص : 1 م</span></td>
+                                <td><span class="badge-time">10 ص : 1 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد عادل</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7 م : 11 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ خالد عويضة</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5 م : 7 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 14. عيادة الصدر -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-lungs"></i> جدول مواعيد عيادة الصدر</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ طارق حمدى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ منذر رفقى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td><span class="badge-time">12.00 ظ</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ رضا الغمرى</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد عادل</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 15. عيادة الجراحة العامة والجراحة النسائية -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-user-doctor"></i> جدول مواعيد الجراحة العامة والجراحة النسائية</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>التخصص / الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ عمرو خليك (جراحة)</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5.30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد رمضان (جراحة)</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">11.00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد سلطان (جراحة)</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">9.00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد شعبان (جراحة)</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد عسكر (جراحة)</td>
+                                <td><span class="badge-time">4.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ سيد هنداوي (جراحة)</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9.30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td><span class="badge-time">3.30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد الأمين (جراحة)</td>
+                                <td><span class="badge-time">10.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ شوكت شاكر (جراحة)</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10.00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمود محمد (جراحة)</td>
+                                <td><span class="badge-time">10.30 ص / 5 م</span></td>
+                                <td><span class="badge-time">5.00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">12.30 ظ / 5 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد الحوام (جراحة)</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12.00 ظ</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ هاني مختار (جراحة)</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2.00 م</span></td>
+                            </tr>
+                            <tr style="background-color: #fff3cd;">
+                                <td class="doc-name">د/ أسماء أحمد (الجراحة النسائية)</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7.00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 16. عيادة العظام -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-bone"></i> جدول مواعيد عيادة العظام</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمد رخا</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ كريم خطاب</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 ص</span></td>
+                                <td><span class="badge-time">9:30 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد عفيفي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد خطاب</td>
+                                <td><span class="badge-time">1:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عمر علي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عمرو الدرس</td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:30 م</span></td>
+                                <td><span class="badge-time">11:00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد فتحي درويش</td>
+                                <td><span class="badge-time">8:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمود الخولي</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد عبدالغني صبره</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10:00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد عبدالغفار</td>
+                                <td><span class="badge-time">11 ص / 3 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11:00 ص</span></td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td><span class="badge-time">11 ص / 3 م</span></td>
+                                <td><span class="badge-time">2:00 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد رأفت</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6:00 م</span></td>
+                                <td><span class="badge-time">6:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد عبدالسلام</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ ياسين الغول</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 17. عيادة العلاج الطبيعي -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-hands-holding-child"></i> جدول مواعيد عيادة العلاج الطبيعي</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ نعمت عبدالعزيز</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ علاء عنتر</td>
+                                <td><span class="badge-time">10:00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10:00 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">10:00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد حبيشي</td>
+                                <td><span class="badge-time">7:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد حمدي</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:30 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ مريم مجدي</td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:00 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:00 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 18. عيادة الغدة الدرقية -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-notes-medical"></i> جدول مواعيد عيادة الغدة الدرقية</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ شيرين مهدي</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11:00 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">11:00 ص</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">11:00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 19. عيادة الغدد الصماء والسكر -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-droplet"></i> جدول مواعيد عيادة الغدد الصماء والسكر</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ هدى جودة</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عبدالله نواره</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 20. عيادة القلب -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-heart-pulse"></i> جدول مواعيد عيادة القلب</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ باهر فهيم</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">12:00 ظ</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد سالم</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عبدالله محمد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ خالد سعيد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ إسلام عبيد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد السيد ابوالليل</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">2:00 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أسامة خليل</td>
+                                <td><span class="badge-time">7:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عبدالله أحمد</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد جسار</td>
+                                <td>—</td>
+                                <td><span class="badge-time">11:00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ آيه موسى</td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد مصطفى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">8:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 21. عيادة المسالك البولية -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-user-doctor"></i> جدول مواعيد عيادة المسالك البولية</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمود ياسين</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ محمد سويلم</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">10:00 ص</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ حسن المسلمى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td><span class="badge-time">9:00 م</span></td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ إبراهيم علام</td>
+                                <td><span class="badge-time">2:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 22. عيادة النسا والتوليد -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-person-pregnant"></i> جدول مواعيد عيادة النسا والتوليد</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ سعيد الباشا</td>
+                                <td>—</td>
+                                <td><span class="badge-time">6:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ شيماء منير</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ عمرو جودة</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ شكرى حمد</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ سلوى يونس</td>
+                                <td>—</td>
+                                <td><span class="badge-time">1:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">7:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد فضل</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:30 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ مروة عبدالرحمن</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أيمن الكومي</td>
+                                <td>—</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أمنية سماحة</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ أحمد علي</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 23. عيادة النفسية والعصبية -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-brain"></i> جدول مواعيد عيادة النفسية والعصبية</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ عمرو عبدالعزيز</td>
+                                <td><span class="badge-time">5:00 م</span></td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td>—</td>
+                                <td><span class="badge-time">3:00 م</span></td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 24. عيادة أمراض الدم -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-droplet"></i> جدول مواعيد عيادة أمراض الدم</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ محمد جمال يوسف</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">9:00 ص</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td class="doc-name">د/ إسراء شعبان</td>
+                                <td><span class="badge-time">8:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 25. عيادة أمراض المخ والأعصاب -->
+            <div class="schedule-section">
+                <h2 class="section-title"><i class="fa-solid fa-brain"></i> جدول مواعيد عيادة أمراض المخ والأعصاب</h2>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الطبيب المعالج</th>
+                                <th>السبت</th>
+                                <th>الأحد</th>
+                                <th>الأثنين</th>
+                                <th>الثلاثاء</th>
+                                <th>الأربعاء</th>
+                                <th>الخميس</th>
+                                <th>الجمعة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="doc-name">د/ أحمد شوقى</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td><span class="badge-time">4:00 م</span></td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> العودة للواجهة الرئيسية</a>
+        </div>
     </div>
-</div>
+
+    <footer>
+        <p>مستشفى ابن سينا - العاشر من رمضان - أرض المستشفيات - أمام نادي المجاورة العاشرة</p>
+        <p>تليفون: 01222243157 / 01222243156 | أرضي: 055/4378111 - 055/4368444 - 055/4356533 - 055/4354282</p>
+    </footer>
+
+</body>
+</html>
