@@ -34,6 +34,18 @@
             font-size: 22px;
         }
 
+        .page-header-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-header-brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
         .page-header a {
             color: white;
             text-decoration: none;
@@ -60,6 +72,47 @@
             text-align: center;
             color: #666;
             margin-bottom: 20px;
+        }
+
+        .search-panel {
+            margin-bottom: 25px;
+        }
+
+        .search-panel label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0056b3;
+            font-weight: 700;
+        }
+
+        .search-panel input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cfd8dc;
+            border-radius: 6px;
+            font: inherit;
+            color: #333;
+        }
+
+        .search-panel input:focus {
+            outline: 2px solid #90caf9;
+            border-color: #0056b3;
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 12px;
+        }
+
+        .filter-row select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cfd8dc;
+            border-radius: 6px;
+            background: white;
+            font: inherit;
+            color: #333;
         }
 
         .companies-grid {
@@ -97,16 +150,28 @@
                 font-size: 18px;
             }
 
+            .page-header-brand img {
+                width: 36px;
+                height: 36px;
+            }
+
             .companies-content {
                 margin: 20px 12px;
                 padding: 20px 15px;
+            }
+
+            .filter-row {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header class="page-header">
-        <h1>الشركات والجهات المتعاقدة</h1>
+        <div class="page-header-brand">
+            <img src="Logo HD.png" alt="شعار مستشفى ابن سينا">
+            <h1>الشركات والجهات المتعاقدة</h1>
+        </div>
         <a href="home.html">العودة للصفحة الرئيسية</a>
     </header>
 
@@ -125,6 +190,41 @@
 
             if (companies) {
                 companiesContent.innerHTML = companies.innerHTML;
+                companiesContent.insertAdjacentHTML('afterbegin', '<div class="search-panel"><label for="company-search">البحث عن شركة أو جهة</label><div class="filter-row"><input id="company-search" type="search" placeholder="اكتب اسم الشركة أو الجهة..." autocomplete="off"><select id="company-type" aria-label="تصفية نوع الجهة"><option value="all">كل الجهات</option><option value="company">الشركات</option><option value="syndicate">النقابات</option><option value="authority">الهيئات والوزارات</option></select></div></div>');
+
+                const companyItems = [...companiesContent.querySelectorAll('.company-item')];
+                const searchInput = document.getElementById('company-search');
+                const typeSelect = document.getElementById('company-type');
+
+                const matchesType = (company, type) => {
+                    const text = company.textContent.toLocaleLowerCase();
+
+                    if (type === 'syndicate') {
+                        return text.includes('نقابة');
+                    }
+
+                    if (type === 'authority') {
+                        return text.includes('وزارة') || text.includes('مجلس');
+                    }
+
+                    if (type === 'company') {
+                        return text.includes('شركة') || text.includes('فندق') || text.includes('هايبر') || text.includes('مؤسسة');
+                    }
+
+                    return true;
+                };
+
+                const filterCompanies = () => {
+                    const query = searchInput.value.trim().toLocaleLowerCase();
+                    const type = typeSelect.value;
+
+                    companyItems.forEach((company) => {
+                        company.hidden = (query && !company.textContent.toLocaleLowerCase().includes(query)) || !matchesType(company, type);
+                    });
+                };
+
+                searchInput.addEventListener('input', filterCompanies);
+                typeSelect.addEventListener('change', filterCompanies);
             } else {
                 companiesContent.textContent = 'تعذر تحميل الشركات والجهات المتعاقدة.';
             }
