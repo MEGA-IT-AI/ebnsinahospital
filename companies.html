@@ -219,11 +219,14 @@
                     const type = typeSelect.value;
 
                     companyItems.forEach((company) => {
-                        company.hidden = (query && !company.textContent.toLocaleLowerCase().includes(query)) || !matchesType(company, type);
+                        const matches = (!query || company.textContent.toLocaleLowerCase().includes(query)) && matchesType(company, type);
+                        company.hidden = !matches;
+                        company.style.display = matches ? '' : 'none';
                     });
                 };
 
                 searchInput.addEventListener('input', filterCompanies);
+                searchInput.addEventListener('keyup', filterCompanies);
                 typeSelect.addEventListener('change', filterCompanies);
             } else {
                 companiesContent.textContent = 'تعذر تحميل الشركات والجهات المتعاقدة.';
