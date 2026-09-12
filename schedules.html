@@ -32,6 +32,18 @@
             font-size: 22px;
         }
 
+        .page-header-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-header-brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
         .page-header a {
             color: white;
             text-decoration: none;
@@ -56,6 +68,31 @@
             margin-bottom: 35px;
         }
 
+        .search-panel {
+            margin-bottom: 25px;
+        }
+
+        .search-panel label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0056b3;
+            font-weight: 700;
+        }
+
+        .search-panel input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cfd8dc;
+            border-radius: 6px;
+            font: inherit;
+            color: #333;
+        }
+
+        .search-panel input:focus {
+            outline: 2px solid #90caf9;
+            border-color: #0056b3;
+        }
+
         .section-title {
             color: #0056b3;
             text-align: center;
@@ -77,10 +114,24 @@
             font-size: 14px;
         }
 
+        table th:first-child,
+        table td:first-child {
+            position: sticky;
+            right: 0;
+            z-index: 1;
+            min-width: 145px;
+            background: white;
+        }
+
         table th {
             background-color: #0056b3;
             color: white;
             text-align: center;
+        }
+
+        table th:first-child {
+            background-color: #0056b3;
+            z-index: 2;
         }
 
         table tr:nth-child(even) {
@@ -100,6 +151,21 @@
             white-space: nowrap;
         }
 
+        .badge-time.morning {
+            background-color: #fff8e1;
+            color: #8d6e00;
+        }
+
+        .badge-time.afternoon {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-time.evening {
+            background-color: #ede7f6;
+            color: #5e35b1;
+        }
+
         .doc-name {
             font-weight: bold;
             color: #0056b3;
@@ -116,6 +182,11 @@
                 font-size: 18px;
             }
 
+            .page-header-brand img {
+                width: 36px;
+                height: 36px;
+            }
+
             .schedule-content {
                 margin: 20px auto;
                 padding: 0 12px;
@@ -125,7 +196,10 @@
 </head>
 <body>
     <header class="page-header">
-        <h1>جداول العيادات</h1>
+        <div class="page-header-brand">
+            <img src="Logo HD.png" alt="شعار مستشفى ابن سينا">
+            <h1>جداول العيادات</h1>
+        </div>
         <a href="home.html">العودة للصفحة الرئيسية</a>
     </header>
 
@@ -144,6 +218,31 @@
 
             if (schedules) {
                 scheduleContent.innerHTML = schedules.innerHTML;
+                scheduleContent.insertAdjacentHTML('afterbegin', '<div class="search-panel"><label for="schedule-search">البحث عن طبيب أو عيادة</label><input id="schedule-search" type="search" placeholder="اكتب اسم الطبيب أو التخصص..." autocomplete="off"></div>');
+
+                const sections = [...scheduleContent.querySelectorAll('.schedule-section')];
+                const searchInput = document.getElementById('schedule-search');
+
+                searchInput.addEventListener('input', () => {
+                    const query = searchInput.value.trim().toLocaleLowerCase();
+
+                    sections.forEach((section) => {
+                        section.hidden = query && !section.textContent.toLocaleLowerCase().includes(query);
+                    });
+                });
+
+                scheduleContent.querySelectorAll('.badge-time').forEach((badge) => {
+                    const time = badge.textContent.trim();
+                    const hour = Number.parseInt(time, 10);
+
+                    if (time.includes('ص')) {
+                        badge.classList.add('morning');
+                    } else if (time.includes('م') && hour >= 6) {
+                        badge.classList.add('evening');
+                    } else {
+                        badge.classList.add('afternoon');
+                    }
+                });
             } else {
                 scheduleContent.textContent = 'تعذر تحميل جداول العيادات.';
             }
