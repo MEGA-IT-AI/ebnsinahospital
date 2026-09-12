@@ -227,9 +227,13 @@
                     const query = searchInput.value.trim().toLocaleLowerCase();
 
                     sections.forEach((section) => {
-                        section.hidden = query && !section.textContent.toLocaleLowerCase().includes(query);
+                        const matches = !query || section.textContent.toLocaleLowerCase().includes(query);
+                        section.hidden = !matches;
+                        section.style.display = matches ? '' : 'none';
                     });
                 });
+
+                searchInput.addEventListener('keyup', () => searchInput.dispatchEvent(new Event('input')));
 
                 scheduleContent.querySelectorAll('.badge-time').forEach((badge) => {
                     const time = badge.textContent.trim();
