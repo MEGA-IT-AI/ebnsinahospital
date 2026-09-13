@@ -17,13 +17,14 @@
         body {
             background: linear-gradient(-45deg, #0056b3, #d9534f, #0275d8, #c9302c);
             background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
+            animation: gradientBG 12s ease infinite;
             color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            overflow-x: hidden;
         }
 
         @keyframes gradientBG {
@@ -46,6 +47,12 @@
             margin-bottom: -40px;
             z-index: 3;
             filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+            animation: floatLogo 3s ease-in-out infinite;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
 
         .top-logo img {
@@ -69,14 +76,40 @@
         h1 {
             color: #0056b3;
             margin-bottom: 15px;
-            font-size: 28px;
+            font-size: 26px;
+            animation: slideInDown 1s ease-out;
         }
 
-        p {
+        @keyframes slideInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-subtext {
             color: #555;
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
+            font-weight: 600;
+            display: inline-block;
+            animation: pulseText 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pulseText {
+            0%, 100% {
+                transform: scale(1);
+                color: #444;
+            }
+            50% {
+                transform: scale(1.03);
+                color: #0056b3;
+            }
         }
 
         .info-section {
@@ -109,30 +142,53 @@
             text-align: right;
         }
 
-        /* تنسيق أزرار الاتصال والواتساب داخل المربع */
         .contact-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 15px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        .action-btn {
+        .contact-row {
             display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .square-btn {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 10px;
-            border-radius: 8px;
+            gap: 6px;
+            padding: 12px 8px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
             color: white;
-            font-size: 14px;
-            transition: transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .action-btn:hover {
-            transform: translateY(-2px);
+        .square-btn i {
+            font-size: 20px;
+        }
+
+        .square-btn .label {
+            font-size: 12px;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .square-btn .number {
+            font-size: 13px;
+            font-weight: bold;
+            direction: ltr;
+        }
+
+        .square-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
 
         .btn-call {
@@ -160,7 +216,6 @@
             background-color: #e60000;
         }
 
-        /* الأزرار العائمة أسفل الشاشة */
         .floating-buttons {
             position: fixed;
             bottom: 20px;
@@ -196,9 +251,121 @@
         .float-call {
             background-color: #0275d8;
         }
+
+        /* تنسيقات نافذة الترحيب المنبثقة (Popup Modal) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 440px;
+            width: 90%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            transform: translateY(-30px);
+            transition: transform 0.4s ease;
+        }
+
+        /* حاوية الشعارات داخل النافذة المنبثقة مع ضبط المحاذاة والمسافات */
+        .modal-logos-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .modal-logo {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+        }
+
+        /* تكبير الشعار الرئيسي في المنتصف */
+        .modal-logo.main {
+            width: 98px;
+            height: 98px;
+        }
+
+        /* تكبير شعار اليسار (Logo HD 1.png) قليلاً لتنسيق أفضل */
+        .modal-logo.left-logo {
+            width: 86px;
+            height: 86px;
+        }
+
+        .modal-content h2 {
+            color: #0056b3;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #555555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .modal-btn {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .modal-btn:hover, 
+        .modal-btn:active {
+            background-color: #e60000;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
+
+    <!-- نافذة رسالة الترحيب المنبثقة عند فتح الصفحة -->
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal-content">
+            <!-- حاوية الشعارات الثلاثة المتناسقة -->
+            <div class="modal-logos-container">
+                <img src="Logo HD 2.png" alt="شعار إضافي يمين" class="modal-logo">
+                <img src="Logo HD.png" alt="شعار مجموعة ابن سينا الطبية" class="modal-logo main">
+                <img src="Logo HD 1.png" alt="شعار إضافي يسار" class="modal-logo left-logo">
+            </div>
+            
+            <h2>أهلاً بك في مجموعة ابن سينا الطبية</h2>
+            <p>نحن فخورون بتقديم الرعاية الصحية المتكاملة على مدار الساعة لخدمة أهلنا في العاشر من رمضان.</p>
+            <button id="closeModalBtn" class="modal-btn">مرحباً، ابدأ التصفح</button>
+        </div>
+    </div>
 
     <div class="main-wrapper">
         <div class="top-logo">
@@ -207,7 +374,7 @@
 
         <div class="container">
             <h1>مرحباً بكم في مستشفى ابن سينا العاشر من رمضان</h1>
-            <p>نحن هنا لرعايتكم وتقديم أفضل الخدمات الطبية المتميزة بأعلى معايير الجودة والراحة.</p>
+            <p class="animated-subtext">نحن هنا لرعايتكم وتقديم أفضل الخدمات الطبية المتميزة بأعلى معايير الجودة والراحة.</p>
             
             <div class="info-section">
                 <div class="info-item">
@@ -216,26 +383,36 @@
                 </div>
             </div>
 
-            <!-- أزرار الاتصال المباشر -->
-            <div class="section-title">📞 للاتصال الهاتفي السريع:</div>
+            <!-- وسائل التواصل السريعة (أزرار مربعة تعرض الأرقام مباشرة) -->
+            <div class="section-title">📞 تواصل معنا بسرعة (اتصال أو واتساب):</div>
             <div class="contact-group">
-                <a href="tel:01222243156" class="action-btn btn-call">
-                    <i class="fa-solid fa-phone"></i> اتصال (01222243156)
-                </a>
-                <a href="tel:01222243157" class="action-btn btn-call">
-                    <i class="fa-solid fa-phone"></i> اتصال (01222243157)
-                </a>
-            </div>
+                <!-- الخط الأول (الرقم 01222243156) -->
+                <div class="contact-row">
+                    <a href="tel:01222243156" class="square-btn btn-call">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="label">اتصال</span>
+                        <span class="number">01222243156</span>
+                    </a>
+                    <a href="url?id=0" target="_blank" class="square-btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span class="label">واتساب</span>
+                        <span class="number">01222243156</span>
+                    </a>
+                </div>
 
-            <!-- أزرار الواتساب -->
-            <div class="section-title">💬 للمراسلة عبر الواتساب:</div>
-            <div class="contact-group">
-                <a href="https://wa.me/201222243156" target="_blank" class="action-btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> واتساب (01222243156)
-                </a>
-                <a href="https://wa.me/201222243157" target="_blank" class="action-btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> واتساب (01222243157)
-                </a>
+                <!-- الخط الثاني (الرقم 01222243157) -->
+                <div class="contact-row">
+                    <a href="tel:01222243157" class="square-btn btn-call">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="label">اتصال</span>
+                        <span class="number">01222243157</span>
+                    </a>
+                    <a href="https://wa.me/201222243157" target="_blank" class="square-btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span class="label">واتساب</span>
+                        <span class="number">01222243157</span>
+                    </a>
+                </div>
             </div>
 
             <a href="home.html" class="btn">الدخول علي الموقع</a>
@@ -252,5 +429,29 @@
         </a>
     </div>
 
+    <!-- كود التشغيل الخاص لنافذة الترحيب -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("welcomeModal");
+            const closeBtn = document.getElementById("closeModalBtn");
+
+            // إظهار الرسالة تلقائياً بعد فتح الصفحة بـ نصف ثانية
+            setTimeout(function() {
+                modal.classList.add("show");
+            }, 500);
+
+            // إخفاء الرسالة عند الضغط على زر الترحيب
+            closeBtn.addEventListener("click", function() {
+                modal.classList.remove("show");
+            });
+
+            // إخفاء الرسالة أيضاً عند الضغط في أي مكان خارج الصندوق
+            modal.addEventListener("click", function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove("show");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
