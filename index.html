@@ -63,7 +63,7 @@
 
         .container {
             background-color: rgba(255, 255, 255, 0.95);
-            padding: 50px 40px 40px 40px;
+            padding: 50px 40px 25px 40px;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
             text-align: center;
@@ -216,6 +216,61 @@
             background-color: #e60000;
         }
 
+        /* تنسيقات القسم السفلي */
+        .extra-section-inline {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .extra-image-small {
+            width: 50px;
+            height: auto;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        /* نص "تصميم بواسطة" باللون الذهبي */
+        .copyright-text {
+            font-size: 13px;
+            font-weight: bold;
+            color: #d4b64e;
+        }
+
+        .inline-icons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* اللون الذهبي الفاتح للأيقونات */
+        .gold-light-btn {
+            background-color: #e6ca65;
+            color: #333;
+        }
+
+        .mini-icon-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .mini-icon-btn:hover {
+            transform: scale(1.12);
+            background-color: #d4b64e;
+        }
+
         .floating-buttons {
             position: fixed;
             bottom: 20px;
@@ -252,7 +307,7 @@
             background-color: #0275d8;
         }
 
-        /* تنسيقات نافذة الترحيب المنبثقة (Popup Modal) */
+        /* نافذة الترحيب */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -287,7 +342,6 @@
             transition: transform 0.4s ease;
         }
 
-        /* حاوية الشعارات داخل النافذة المنبثقة مع ضبط المحاذاة والمسافات */
         .modal-logos-container {
             display: flex;
             align-items: center;
@@ -303,13 +357,11 @@
             filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
         }
 
-        /* تكبير الشعار الرئيسي في المنتصف */
         .modal-logo.main {
             width: 98px;
             height: 98px;
         }
 
-        /* تكبير شعار اليسار (Logo HD 1.png) قليلاً لتنسيق أفضل */
         .modal-logo.left-logo {
             width: 86px;
             height: 86px;
@@ -351,10 +403,9 @@
 </head>
 <body>
 
-    <!-- نافذة رسالة الترحيب المنبثقة عند فتح الصفحة -->
+    <!-- نافذة الترحيب -->
     <div id="welcomeModal" class="modal-overlay">
         <div class="modal-content">
-            <!-- حاوية الشعارات الثلاثة المتناسقة -->
             <div class="modal-logos-container">
                 <img src="Logo HD 2.png" alt="شعار إضافي يمين" class="modal-logo">
                 <img src="Logo HD.png" alt="شعار مجموعة ابن سينا الطبية" class="modal-logo main">
@@ -383,24 +434,22 @@
                 </div>
             </div>
 
-            <!-- وسائل التواصل السريعة (أزرار مربعة تعرض الأرقام مباشرة) -->
+            <!-- وسائل التواصل السريعة -->
             <div class="section-title">📞 تواصل معنا بسرعة (اتصال أو واتساب):</div>
             <div class="contact-group">
-                <!-- الخط الأول (الرقم 01222243156) -->
                 <div class="contact-row">
                     <a href="tel:01222243156" class="square-btn btn-call">
                         <i class="fa-solid fa-phone"></i>
                         <span class="label">اتصال</span>
                         <span class="number">01222243156</span>
                     </a>
-                    <a href="url?id=0" target="_blank" class="square-btn btn-whatsapp">
+                    <a href="url?id=3" target="_blank" class="square-btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span class="label">واتساب</span>
                         <span class="number">01222243156</span>
                     </a>
                 </div>
 
-                <!-- الخط الثاني (الرقم 01222243157) -->
                 <div class="contact-row">
                     <a href="tel:01222243157" class="square-btn btn-call">
                         <i class="fa-solid fa-phone"></i>
@@ -416,10 +465,24 @@
             </div>
 
             <a href="home.html" class="btn">الدخول علي الموقع</a>
+
+            <!-- القسم السفلي: نص "تصميم بواسطة" أولاً على اليمين ثم الصورة ثم الأيقونات -->
+            <div class="extra-section-inline">
+                <span class="copyright-text">تصميم بواسطة</span>
+                <img src="100.png" alt="صورة توضيحية" class="extra-image-small">
+                <div class="inline-icons">
+                    <a href="tel:01010255123" class="mini-icon-btn gold-light-btn" title="اتصال">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/201010255123" target="_blank" class="mini-icon-btn gold-light-btn" title="واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- أزرار عائمة أسفل يسار الشاشة لتسهيل الوصول الفوري -->
+    <!-- الأزرار العائمة -->
     <div class="floating-buttons">
         <a href="https://wa.me/201222243156" target="_blank" class="float-btn float-whatsapp" title="مراسلة واتساب">
             <i class="fa-brands fa-whatsapp"></i>
@@ -429,23 +492,19 @@
         </a>
     </div>
 
-    <!-- كود التشغيل الخاص لنافذة الترحيب -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const modal = document.getElementById("welcomeModal");
             const closeBtn = document.getElementById("closeModalBtn");
 
-            // إظهار الرسالة تلقائياً بعد فتح الصفحة بـ نصف ثانية
             setTimeout(function() {
                 modal.classList.add("show");
             }, 500);
 
-            // إخفاء الرسالة عند الضغط على زر الترحيب
             closeBtn.addEventListener("click", function() {
                 modal.classList.remove("show");
             });
 
-            // إخفاء الرسالة أيضاً عند الضغط في أي مكان خارج الصندوق
             modal.addEventListener("click", function(e) {
                 if (e.target === modal) {
                     modal.classList.remove("show");
