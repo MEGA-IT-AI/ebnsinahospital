@@ -18,15 +18,16 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* الهيدر العلوي بالأخضر الداكن للمستشفى */
         .page-header {
             height: 72px;
-            background: #0056b3;
+            background: #00563b;
             color: white;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 5%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         .page-header h1 {
@@ -37,7 +38,7 @@
         .page-header-brand {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .page-header-brand img {
@@ -47,13 +48,20 @@
         }
 
         .page-header a {
-            color: white;
+            color: #e8f5e9;
             text-decoration: none;
             font-size: 15px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .page-header a:hover {
+            color: #ffffff;
+            text-decoration: underline;
         }
 
         .companies-content {
-            max-width: 1150px;
+            max-width: 1200px;
             margin: 30px auto;
             padding: 30px;
             background: white;
@@ -62,105 +70,116 @@
         }
 
         .section-title {
-            color: #0056b3;
+            color: #00563b;
             text-align: center;
-            margin: 20px 0;
-            font-size: 22px;
-        }
-
-        .companies-content > p {
-            text-align: center;
-            color: #666;
-            margin-bottom: 20px;
+            margin: 10px 0 25px 0;
+            font-size: 24px;
+            font-weight: 700;
         }
 
         .search-panel {
+            background: #f8fcf9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #c8e6c9;
             margin-bottom: 25px;
         }
 
         .search-panel label {
             display: block;
             margin-bottom: 8px;
-            color: #0056b3;
+            color: #00563b;
             font-weight: 700;
-        }
-
-        .search-panel input {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid #cfd8dc;
-            border-radius: 6px;
-            font: inherit;
-            color: #333;
-        }
-
-        .search-panel input:focus {
-            outline: 2px solid #90caf9;
-            border-color: #0056b3;
         }
 
         .filter-row {
             display: grid;
-            grid-template-columns: 1fr 220px;
+            grid-template-columns: 1fr 240px;
             gap: 12px;
         }
 
+        .search-panel input,
         .filter-row select {
             width: 100%;
             padding: 12px 14px;
-            border: 1px solid #cfd8dc;
+            border: 1px solid #a5d6a7;
             border-radius: 6px;
-            background: white;
             font: inherit;
             color: #333;
+            background: white;
+        }
+
+        .search-panel input:focus,
+        .filter-row select:focus {
+            outline: 2px solid #81c784;
+            border-color: #00563b;
+        }
+
+        .companies-stats {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .companies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 12px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .company-item {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-right: 3px solid #0056b3;
-            padding: 10px 14px;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-right: 4px solid #1b5e20;
+            padding: 12px 15px;
             border-radius: 6px;
             font-size: 14px;
-            color: #333;
+            color: #2e7d32;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            transition: transform 0.15s, box-shadow 0.15s;
         }
 
-        .company-item i {
-            color: #0056b3;
-            font-size: 12px;
+        .company-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            background: #f1f8e9;
+        }
+
+        .company-item span {
+            color: #2c3e50;
         }
 
         @media (max-width: 600px) {
             .page-header {
                 height: 64px;
-                padding: 0 20px;
+                padding: 0 15px;
             }
 
             .page-header h1 {
-                font-size: 18px;
+                font-size: 17px;
             }
 
             .page-header-brand img {
-                width: 36px;
-                height: 36px;
+                width: 32px;
+                height: 32px;
             }
 
             .companies-content {
-                margin: 20px 12px;
-                padding: 20px 15px;
+                margin: 15px 10px;
+                padding: 18px 12px;
             }
 
             .filter-row {
+                grid-template-columns: 1fr;
+            }
+
+            .companies-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -175,64 +194,315 @@
         <a href="home.html">العودة للصفحة الرئيسية</a>
     </header>
 
-    <main id="companies-content" class="companies-content" aria-live="polite">
-        جاري تحميل الشركات والجهات المتعاقدة...
+    <main class="companies-content">
+        <h2 class="section-title">سابقة أعمال مستشفى ابن سينا - العاشر من رمضان</h2>
+        
+        <div class="search-panel">
+            <label for="company-search">البحث والتصفية</label>
+            <div class="filter-row">
+                <input id="company-search" type="search" placeholder="اكتب اسم الشركة، النقابة، أو التأمين..." autocomplete="off">
+                <select id="company-type" aria-label="تصفية نوع الجهة">
+                    <option value="all">جميع الجهات والمتعاقدين</option>
+                    <option value="insurance">شركات التأمين والرعاية الصحية</option>
+                    <option value="syndicate">النقابات والجمعيات</option>
+                    <option value="government">الهيئات والجهات الحكومية</option>
+                    <option value="company">الشركات والمؤسسات الخاصة</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="companies-stats" class="companies-stats">عرض جميع الجهات المتعاقدة</div>
+
+        <div id="contracted-companies" class="companies-grid">
+            <div class="company-item"><span>شركة فريش وأسرهم</span></div>
+            <div class="company-item"><span>شركة الكهرباء وأسرهم</span></div>
+            <div class="company-item"><span>مجلس الدفاع الوطني وأسرهم (المخابرات العامة)</span></div>
+            <div class="company-item"><span>شركة ابيكو وأسرهم</span></div>
+            <div class="company-item"><span>شركة مصر اوتسوكا وأسرهم</span></div>
+            <div class="company-item"><span>مجموعة السويدى اليكتريك وأسرهم</span></div>
+            <div class="company-item"><span>نقابة الأطباء</span></div>
+            <div class="company-item"><span>نقابة المهندسين</span></div>
+            <div class="company-item"><span>نقابة المحامين</span></div>
+            <div class="company-item"><span>نقابة التطبيقيين</span></div>
+            <div class="company-item"><span>نقابة المعلمين</span></div>
+            <div class="company-item"><span>نقابة المهن الزراعية</span></div>
+            <div class="company-item"><span>نقابة المهن العلمية</span></div>
+            <div class="company-item"><span>النقابة العامة لذوي الاحتياجات الخاصة</span></div>
+            <div class="company-item"><span>نقابة المعاشات</span></div>
+            <div class="company-item"><span>وزارة الآثار</span></div>
+            <div class="company-item"><span>شركة اليكو METLIFE</span></div>
+            <div class="company-item"><span>شركة اكسا مصر</span></div>
+            <div class="company-item"><span>شركة جلوب ميد</span></div>
+            <div class="company-item"><span>شركة ميدي كير</span></div>
+            <div class="company-item"><span>شركة ميد رايت</span></div>
+            <div class="company-item"><span>هايبر وان</span></div>
+            <div class="company-item"><span>شركة الماسبة D M S</span></div>
+            <div class="company-item"><span>شركة ايجيكير</span></div>
+            <div class="company-item"><span>شركة سمارت كير</span></div>
+            <div class="company-item"><span>شركة نكست كير</span></div>
+            <div class="company-item"><span>شركة الأهلي للمشروعات</span></div>
+            <div class="company-item"><span>شركة يوني كير</span></div>
+            <div class="company-item"><span>شركة اوميجا كير</span></div>
+            <div class="company-item"><span>شركة ميد نت</span></div>
+            <div class="company-item"><span>شركة المشرق</span></div>
+            <div class="company-item"><span>شركة هيلث اند ويلث</span></div>
+            <div class="company-item"><span>شركة تكنو ماستر</span></div>
+            <div class="company-item"><span>شركة جيد تكستايل وأسرهم</span></div>
+            <div class="company-item"><span>شركة ستار جلاس</span></div>
+            <div class="company-item"><span>شركة نيو سيتي جلاس</span></div>
+            <div class="company-item"><span>فندق ماريتا</span></div>
+            <div class="company-item"><span>شركة السويدى اليكتريك</span></div>
+            <div class="company-item"><span>الشركة السعودية المصرية للأملاح</span></div>
+            <div class="company-item"><span>شركة مطبعة المهندسين</span></div>
+            <div class="company-item"><span>شركة مينا فارم</span></div>
+            <div class="company-item"><span>شركة ميديكال اكسبرتس</span></div>
+            <div class="company-item"><span>شركة شفائي كير</span></div>
+            <div class="company-item"><span>شركة اتش كيميكال وأسرهم</span></div>
+            <div class="company-item"><span>شركة اتلانتك وأسرهم</span></div>
+            <div class="company-item"><span>شركة انسوتك وأسرهم</span></div>
+            <div class="company-item"><span>شركة بلوك الصناعية وأسرهم</span></div>
+            <div class="company-item"><span>دار المدينة المنورة وأسرهم</span></div>
+            <div class="company-item"><span>شركة الأعمال الهندسية البورسعيدية وأسرهم</span></div>
+            <div class="company-item"><span>شركة كار جاس وأسرهم</span></div>
+            <div class="company-item"><span>شركة K C G وأسرهم</span></div>
+            <div class="company-item"><span>شركة الدلتا للحلويات وأسرهم</span></div>
+            <div class="company-item"><span>شركة الأندلسية - جامي وأسرهم</span></div>
+            <div class="company-item"><span>جهاز بدر وأسرهم</span></div>
+            <div class="company-item"><span>شركة الوطنية للذرة وأسرهم</span></div>
+            <div class="company-item"><span>مصلحة الضرائب العامة وأسرهم</span></div>
+            <div class="company-item"><span>شركة ايديال ستاندرد وأسرهم</span></div>
+            <div class="company-item"><span>المعهد التكنولوجي العالي وأسرهم</span></div>
+            <div class="company-item"><span>شركة بدوي جروب (شاي العروسة)</span></div>
+            <div class="company-item"><span>شركة افيكو فلتر وأسرهم</span></div>
+            <div class="company-item"><span>شركة فارما سويد مصر وأسرهم</span></div>
+            <div class="company-item"><span>شركة الدولية انترناشونال وأسرهم</span></div>
+            <div class="company-item"><span>مجموعة حديد عز</span></div>
+            <div class="company-item"><span>شركة الشرق للكاووتشك</span></div>
+            <div class="company-item"><span>شركة G P S وأسرهم</span></div>
+            <div class="company-item"><span>شركة مصر الحجاز</span></div>
+            <div class="company-item"><span>شركة الأمل للمواسير وأسرهم</span></div>
+            <div class="company-item"><span>شركة عناية مصر</span></div>
+            <div class="company-item"><span>شركة ميدكوم</span></div>
+            <div class="company-item"><span>شركة اليانز</span></div>
+            <div class="company-item"><span>شركة بي سيف ميديكال</span></div>
+            <div class="company-item"><span>شركة سافكو</span></div>
+            <div class="company-item"><span>شركة الإمبراطور</span></div>
+            <div class="company-item"><span>شركة الاستشاريون</span></div>
+            <div class="company-item"><span>شركة ميدي كونسلت</span></div>
+            <div class="company-item"><span>شركة سيف هيلث كير</span></div>
+            <div class="company-item"><span>شركة ميدي جولد</span></div>
+            <div class="company-item"><span>شركة ميد شور</span></div>
+            <div class="company-item"><span>شركة المستقبل للرعاية الصحية</span></div>
+            <div class="company-item"><span>شركة سياف للاستشارات المالية</span></div>
+            <div class="company-item"><span>شركة كير بلس</span></div>
+            <div class="company-item"><span>شركة مصر هيلث كير</span></div>
+            <div class="company-item"><span>شركة تراي كير</span></div>
+            <div class="company-item"><span>شركة ترايستار</span></div>
+            <div class="company-item"><span>شركة رويال كير</span></div>
+            <div class="company-item"><span>اتحاد حدائق المهندسين</span></div>
+            <div class="company-item"><span>العاملين المدنيين بوزارة الدفاع</span></div>
+            <div class="company-item"><span>شركة سيلفر ايدج</span></div>
+            <div class="company-item"><span>شركة مارسو</span></div>
+            <div class="company-item"><span>شركة دار الإطفاء</span></div>
+            <div class="company-item"><span>شركة انتر باك</span></div>
+            <div class="company-item"><span>شركة نيوفاين باك</span></div>
+            <div class="company-item"><span>شركة ايلف</span></div>
+            <div class="company-item"><span>شركة الكرامة مصر</span></div>
+            <div class="company-item"><span>شركة قنديل للصلب</span></div>
+            <div class="company-item"><span>الشركة العالمية للخدمات الطبية</span></div>
+            <div class="company-item"><span>شركة العربية جروب</span></div>
+            <div class="company-item"><span>شركة الضحي وأسرهم</span></div>
+            <div class="company-item"><span>شركة العاشر للصناعات الالكترونية</span></div>
+            <div class="company-item"><span>النقابة العامة للنقل والمواصلات وخدماتها</span></div>
+            <div class="company-item"><span>الاتحاد المحلي عمال العاشر / النقل البري</span></div>
+            <div class="company-item"><span>شركة الأمين للفلاتر</span></div>
+            <div class="company-item"><span>شركة الحياة لتسويق الخدمات الطبية</span></div>
+            <div class="company-item"><span>الشركة الهندسية للإنشاءات</span></div>
+            <div class="company-item"><span>شركة اكسون للحلول المتكاملة</span></div>
+            <div class="company-item"><span>شركة البو مصر</span></div>
+            <div class="company-item"><span>شركة التجاريون</span></div>
+            <div class="company-item"><span>شركة الدره</span></div>
+            <div class="company-item"><span>شركة الدلتا للتأمين علي الحياة</span></div>
+            <div class="company-item"><span>شركة المصرية الإماراتية</span></div>
+            <div class="company-item"><span>شركة قناة السويس للتأمين</span></div>
+            <div class="company-item"><span>شركة مصر لتأمينات الحياة</span></div>
+            <div class="company-item"><span>شركة السويسرية للملابس</span></div>
+            <div class="company-item"><span>شركة E T C للملابس</span></div>
+            <div class="company-item"><span>شركة الصفا للطباعة</span></div>
+            <div class="company-item"><span>مصلحة الضرائب على المبيعات</span></div>
+            <div class="company-item"><span>شركة العربي لعبوات البلاستيك</span></div>
+            <div class="company-item"><span>الشركة العربية للمحابس</span></div>
+            <div class="company-item"><span>الشركة المصرية للاتصالات</span></div>
+            <div class="company-item"><span>شركة تيوب وأسرهم</span></div>
+            <div class="company-item"><span>شركة الناجي للأدوات المكتبية</span></div>
+            <div class="company-item"><span>شركة انيرجيا للصناعات الحديدية</span></div>
+            <div class="company-item"><span>شركة انيرجيا للكابلات</span></div>
+            <div class="company-item"><span>شركة ايروباك</span></div>
+            <div class="company-item"><span>شركة الأهلي نقدي</span></div>
+            <div class="company-item"><span>شركة العربية لصناعة البلاستيك</span></div>
+            <div class="company-item"><span>شركة العربية لصناعة المستلزمات الطبية ايمكو</span></div>
+            <div class="company-item"><span>شركة العربية للصناعات الالكترونية</span></div>
+            <div class="company-item"><span>شركة العلا للمفروشات</span></div>
+            <div class="company-item"><span>شركة العلاف ماركت</span></div>
+            <div class="company-item"><span>نادي الصفوة</span></div>
+            <div class="company-item"><span>شركة الكرمة تكس</span></div>
+            <div class="company-item"><span>الشركة المصرية السويسرية للمكرونة</span></div>
+            <div class="company-item"><span>شركة المواسير وصناعة البلاستيك</span></div>
+            <div class="company-item"><span>شركة النساجون المتحدون</span></div>
+            <div class="company-item"><span>شركة النصر للمنسوجات</span></div>
+            <div class="company-item"><span>شركة يونايتيد كارتون</span></div>
+            <div class="company-item"><span>شركة الهدى جروب</span></div>
+            <div class="company-item"><span>شركة الهندسية للصناعات الالكترونية</span></div>
+            <div class="company-item"><span>شركة ايزي لايف</span></div>
+            <div class="company-item"><span>شركة بايونير</span></div>
+            <div class="company-item"><span>شركة بوليمرز للصناعات</span></div>
+            <div class="company-item"><span>شركة ترنتي فيجن</span></div>
+            <div class="company-item"><span>شركة المدينة للبلاستيك</span></div>
+            <div class="company-item"><span>شركة المتحدة للمشروبات والأغذية</span></div>
+            <div class="company-item"><span>شركة المعادن الحديثة للصناعة</span></div>
+            <div class="company-item"><span>شركة الصباح للملابس الجاهزة</span></div>
+            <div class="company-item"><span>شركة كليك مير</span></div>
+            <div class="company-item"><span>شركة ايجبت كن</span></div>
+            <div class="company-item"><span>شركة النخلة تكس</span></div>
+            <div class="company-item"><span>الشركة العربية للنقل</span></div>
+            <div class="company-item"><span>شركة سميس كير</span></div>
+            <div class="company-item"><span>شركة تراست للخدمات الطبية</span></div>
+            <div class="company-item"><span>شركة اكو هيلث</span></div>
+            <div class="company-item"><span>شركة تك سيستيم</span></div>
+            <div class="company-item"><span>شركة الشام للمنتجات الغذائية</span></div>
+            <div class="company-item"><span>مدارس الشهاب الخاصة</span></div>
+            <div class="company-item"><span>مدارس رواد الصديق</span></div>
+            <div class="company-item"><span>ميتال برنت</span></div>
+            <div class="company-item"><span>فيركس ايجبت</span></div>
+            <div class="company-item"><span>هابي تكس</span></div>
+            <div class="company-item"><span>شركة بتروتريد</span></div>
+            <div class="company-item"><span>شركة بلوسكايز ايجبت</span></div>
+            <div class="company-item"><span>بنك ميد بنك</span></div>
+            <div class="company-item"><span>بنك الاستثمار العربي</span></div>
+            <div class="company-item"><span>بنك فيصل الإسلامي</span></div>
+            <div class="company-item"><span>ميد مصر</span></div>
+            <div class="company-item"><span>رابطة أبناء الصعيد</span></div>
+            <div class="company-item"><span>شركة رويال تكس</span></div>
+            <div class="company-item"><span>شركة سانتانا وورلد كلاس</span></div>
+            <div class="company-item"><span>شركة سبتكس للغزل والنسيج</span></div>
+            <div class="company-item"><span>شركة سقيا للصناعات الغذائية</span></div>
+            <div class="company-item"><span>شركة سليمان كامل قلادة لأعمال التريكو وأسرهم</span></div>
+            <div class="company-item"><span>مؤسسة سوريا الغد وأسرهم</span></div>
+            <div class="company-item"><span>شركة سوفتكس وأسرهم</span></div>
+            <div class="company-item"><span>شركة سيتي بيبي وأسرهم</span></div>
+            <div class="company-item"><span>شركة سيجام ام وأسرهم</span></div>
+            <div class="company-item"><span>مجموعة سيرو مصر (اس ام دى الصناعية)</span></div>
+            <div class="company-item"><span>مجموعة فتحي حسن (بوبينا جاكو)</span></div>
+            <div class="company-item"><span>شركة شاديباك للعبوات الدوائية</span></div>
+            <div class="company-item"><span>شركة ثري برازرز</span></div>
+            <div class="company-item"><span>جمعية الحسنات الخيرية (أسر وموظفين)</span></div>
+            <div class="company-item"><span>جمعية نهر الحياة (أسر وموظفين)</span></div>
+            <div class="company-item"><span>حزب المؤتمر</span></div>
+            <div class="company-item"><span>حزب مستقبل وطن</span></div>
+            <div class="company-item"><span>ليمار للتسويق</span></div>
+            <div class="company-item"><span>شركة فرج تكس</span></div>
+            <div class="company-item"><span>شركة كلاسيك هوم</span></div>
+            <div class="company-item"><span>شركة كواليتي ميكرز</span></div>
+            <div class="company-item"><span>شركة لاين تكس</span></div>
+            <div class="company-item"><span>مجموعة شركات بدوي (بيكو جروب)</span></div>
+            <div class="company-item"><span>مصانع خطاب للزجاج</span></div>
+            <div class="company-item"><span>شركة مصر الحضارة</span></div>
+            <div class="company-item"><span>شركة مصر الخير للصناعات الغذائية</span></div>
+            <div class="company-item"><span>شركة مور كير</span></div>
+            <div class="company-item"><span>شركة ملو كير</span></div>
+            <div class="company-item"><span>مؤسسة نيدى (أكاديمية حورس)</span></div>
+            <div class="company-item"><span>هيئة إنقاذ الطفولة</span></div>
+            <div class="company-item"><span>شركة ماستر بيت</span></div>
+            <div class="company-item"><span>افرو ايجبت</span></div>
+            <div class="company-item"><span>المتحدة للإنشاءات المعدنية</span></div>
+            <div class="company-item"><span>عليبيتكس</span></div>
+            <div class="company-item"><span>امان</span></div>
+            <div class="company-item"><span>فور يو</span></div>
+            <div class="company-item"><span>روشتة اون لاين</span></div>
+            <div class="company-item"><span>شركة يونايتيد</span></div>
+            <div class="company-item"><span>شركة A H FRUNITURE</span></div>
+            <div class="company-item"><span>شركة M Y A</span></div>
+            <div class="company-item"><span>شركة SLK للصناعات</span></div>
+            <div class="company-item"><span>شركة yyk</span></div>
+            <div class="company-item"><span>شركة تكافل</span></div>
+            <div class="company-item"><span>شركة اريجسا الصناعية</span></div>
+            <div class="company-item"><span>شركة كريتيف</span></div>
+            <div class="company-item"><span>شركة بيتا</span></div>
+            <div class="company-item"><span>شركة مليو كير</span></div>
+            <div class="company-item"><span>شركة لايت كارد</span></div>
+            <div class="company-item"><span>ميديكال اسبورت</span></div>
+            <div class="company-item"><span>راى ستار</span></div>
+            <div class="company-item"><span>شركة صيدليتي</span></div>
+            <div class="company-item"><span>شركة صحتي (سمارت كير نقدي)</span></div>
+            <div class="company-item"><span>شركة طيف وود لتصنيع الأخشاب والأثاث</span></div>
+            <div class="company-item"><span>مؤسسة عمال مصر</span></div>
+            <div class="company-item"><span>شركة فاميلي كير اند كيور</span></div>
+            <div class="company-item"><span>العطاء</span></div>
+            <div class="company-item"><span>صحتك</span></div>
+            <div class="company-item"><span>شركة المجد</span></div>
+            <div class="company-item"><span>شركة فرانس ميتال وأسرهم</span></div>
+            <div class="company-item"><span>شركة الصفا والمروة للمقاولات</span></div>
+            <div class="company-item"><span>شركة نيو بيبي وأسرهم</span></div>
+            <div class="company-item"><span>شركة وردة تكس</span></div>
+            <div class="company-item"><span>جولدن ايجل</span></div>
+            <div class="company-item"><span>ستاركو الحديثة</span></div>
+            <div class="company-item"><span>ليندا تيوب</span></div>
+            <div class="company-item"><span>قباني للأثاث</span></div>
+            <div class="company-item"><span>بناه المستقبل</span></div>
+            <div class="company-item"><span>يونيفرسال للتعبئة والتغليف</span></div>
+            <div class="company-item"><span>بيدكو انترناشونال</span></div>
+            <div class="company-item"><span>نماء التجمع</span></div>
+        </div>
     </main>
 
-    <iframe id="companies-source" src="home.html" title="مصدر الشركات والجهات المتعاقدة" hidden></iframe>
-
     <script>
-        const sourceFrame = document.getElementById('companies-source');
-        const companiesContent = document.getElementById('companies-content');
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('company-search');
+            const typeSelect = document.getElementById('company-type');
+            const companyItems = document.querySelectorAll('.company-item');
+            const statsDiv = document.getElementById('companies-stats');
 
-        sourceFrame.addEventListener('load', () => {
-            const companies = sourceFrame.contentDocument.getElementById('contracted-companies');
+            const matchesType = (text, type) => {
+                if (type === 'syndicate') {
+                    return text.includes('نقابة') || text.includes('جمعية') || text.includes('اتحاد') || text.includes('حزب') || text.includes('رابطة');
+                }
+                if (type === 'government') {
+                    return text.includes('وزارة') || text.includes('مجلس') || text.includes('جهاز') || text.includes('مصلحة') || text.includes('هيئة');
+                }
+                if (type === 'insurance') {
+                    return text.includes('كير') || text.includes('تأمين') || text.includes('ميد') || text.includes('هيلث') || text.includes('صحتي') || text.includes('صحتك') || text.includes('روشتة') || text.includes('عناية');
+                }
+                if (type === 'company') {
+                    return text.includes('شركة') || text.includes('فندق') || text.includes('هايبر') || text.includes('مؤسسة') || text.includes('مصانع') || text.includes('مجموعة');
+                }
+                return true;
+            };
 
-            if (companies) {
-                companiesContent.innerHTML = companies.innerHTML;
-                companiesContent.insertAdjacentHTML('afterbegin', '<div class="search-panel"><label for="company-search">البحث عن شركة أو جهة</label><div class="filter-row"><input id="company-search" type="search" placeholder="اكتب اسم الشركة أو الجهة..." autocomplete="off"><select id="company-type" aria-label="تصفية نوع الجهة"><option value="all">كل الجهات</option><option value="company">الشركات</option><option value="syndicate">النقابات</option><option value="authority">الهيئات والوزارات</option></select></div></div>');
+            const filterCompanies = () => {
+                const query = searchInput.value.trim().toLowerCase();
+                const type = typeSelect.value;
+                let visibleCount = 0;
 
-                const companyItems = [...companiesContent.querySelectorAll('.company-item')];
-                const searchInput = document.getElementById('company-search');
-                const typeSelect = document.getElementById('company-type');
+                companyItems.forEach((company) => {
+                    const text = company.textContent.toLowerCase();
+                    const matchesQuery = !query || text.includes(query);
+                    const matchesCategory = matchesType(text, type);
 
-                const matchesType = (company, type) => {
-                    const text = company.textContent.toLocaleLowerCase();
-
-                    if (type === 'syndicate') {
-                        return text.includes('نقابة');
+                    if (matchesQuery && matchesCategory) {
+                        company.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        company.style.display = 'none';
                     }
+                });
 
-                    if (type === 'authority') {
-                        return text.includes('وزارة') || text.includes('مجلس');
-                    }
+                statsDiv.textContent = `تم العثور على (${visibleCount}) جهة متعاقدة`;
+            };
 
-                    if (type === 'company') {
-                        return text.includes('شركة') || text.includes('فندق') || text.includes('هايبر') || text.includes('مؤسسة');
-                    }
-
-                    return true;
-                };
-
-                const filterCompanies = () => {
-                    const query = searchInput.value.trim().toLocaleLowerCase();
-                    const type = typeSelect.value;
-
-                    companyItems.forEach((company) => {
-                        const matches = (!query || company.textContent.toLocaleLowerCase().includes(query)) && matchesType(company, type);
-                        company.hidden = !matches;
-                        company.style.display = matches ? '' : 'none';
-                    });
-                };
-
-                searchInput.addEventListener('input', filterCompanies);
-                searchInput.addEventListener('keyup', filterCompanies);
-                typeSelect.addEventListener('change', filterCompanies);
-            } else {
-                companiesContent.textContent = 'تعذر تحميل الشركات والجهات المتعاقدة.';
-            }
-
-            sourceFrame.remove();
+            searchInput.addEventListener('input', filterCompanies);
+            typeSelect.addEventListener('change', filterCompanies);
+            
+            filterCompanies();
         });
     </script>
 </body>
