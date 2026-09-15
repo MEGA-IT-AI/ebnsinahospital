@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مستشفى ابن سينا - البوابة الطبية</title>
+    <!-- استدعاء خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', sans-serif; /* تطبيق الخط على الملف بالكامل */
         }
 
         body {
@@ -37,7 +42,7 @@
             align-items: center;
             gap: 12px;
             font-size: 20px;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .logo-area img {
@@ -50,7 +55,7 @@
             color: white;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .container {
@@ -69,11 +74,16 @@
             border-bottom: 4px solid #0056b3;
         }
 
+        .welcome-card h2 {
+            font-weight: 800;
+        }
+
         .section-title {
             color: #0056b3;
             text-align: center;
             margin: 20px 0;
             font-size: 22px;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -137,11 +147,13 @@
             font-size: 18px;
             margin-bottom: 8px;
             color: #0056b3;
+            font-weight: 700;
         }
 
         .main-card p {
             color: #666;
             font-size: 13px;
+            font-weight: 400;
         }
 
         /* قسم مسيرة المستشفى */
@@ -163,6 +175,7 @@
             padding: 20px;
             border-right: 4px solid #0056b3;
             border-radius: 4px;
+            font-weight: 400;
         }
 
         .stats-grid {
@@ -182,7 +195,7 @@
 
         .stat-box .num {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 800;
             display: block;
             margin-bottom: 5px;
             color: #ffeb3b;
@@ -190,6 +203,7 @@
 
         .stat-box .label {
             font-size: 14px;
+            font-weight: 600;
         }
 
         footer {
@@ -206,7 +220,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #e6ca65;
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -241,7 +255,7 @@
             transform: translateY(-3px);
         }
 
-        /* ==================== الأيقونات العائمة ==================== */
+        /* الأيقونات العائمة */
         .floating-container {
             position: fixed;
             bottom: 25px;
@@ -275,7 +289,6 @@
             transform: scale(1.1);
         }
 
-        /* التوهج */
         .phone-btn {
             background-color: #0056b3;
             animation: glow-phone 2s infinite;
@@ -286,7 +299,6 @@
             animation: glow-whatsapp 2s infinite;
         }
 
-        /* القائمة الفرعية للأرقام */
         .numbers-menu {
             position: absolute;
             right: 70px;
@@ -319,7 +331,7 @@
             border-radius: 6px;
             text-decoration: none;
             color: #333;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 14px;
             direction: ltr;
             transition: background 0.2s ease;
@@ -366,7 +378,6 @@
             <p>أهلاً بكم في مستشفى ابن سينا بالعاشر من رمضان - خدمة طبية متميزة</p>
         </div>
 
-        <!-- الأيقونات الرئيسية العلوية -->
         <div class="main-cards-grid">
             <a href="#hospital-history" class="main-card">
                 <div class="main-card-icon"><i class="fa-solid fa-award"></i></div>
@@ -387,7 +398,6 @@
             </a>
         </div>
 
-        <!-- ==================== قسم مسيرة المستشفى ==================== -->
         <div class="about-section" id="hospital-history">
             <h2 class="section-title"><i class="fa-solid fa-hospital"></i> مسيرة مستشفى ابن سينا</h2>
             
@@ -395,8 +405,7 @@
                 تعتبر مستشفى ابن سينا منظومة وصرح طبي متكامل لتكون السباقة في تقديم الخدمات الطبية بالعاشر من رمضان والمدن المحيطة. تقوم تقديم الخدمات العلاجية والوقائية المتميزة بأحدث الأجهزة الطبية المختلفة، وبذلك تقدم أفضل خدمة ممكنة لإرضاء عملائها والعناية بهم. تعمل المستشفى على مدار 24 ساعة بأعلى مستوى إداري وخدمي، وتضم طواقم عمل ذات كفاءة عالية تشمل نخبة من الأساتذة والاستشاريين بكليات الطب في كافة التخصصات يصل عددهم إلى 500 طبيب تقريباً، يعملون تحت إشرافهم فريق من التمريض عالِ التدريب والاحترافية.
             </div>
 
-            <!-- المستشفى في أرقام -->
-            <h3 style="color: #0056b3; margin-top: 20px;"><i class="fa-solid fa-chart-line"></i> المستشفى في أرقام</h3>
+            <h3 style="color: #0056b3; margin-top: 20px; font-weight: 700;"><i class="fa-solid fa-chart-line"></i> المستشفى في أرقام</h3>
             <div class="stats-grid">
                 <div class="stat-box">
                     <span class="num">2005</span>
@@ -426,9 +435,7 @@
         </div>
     </div>
 
-    <!-- الأيقونات العائمة الذكية -->
     <div class="floating-container">
-        <!-- مجموعة الاتصال الهاتفي -->
         <div class="floating-group">
             <div class="floating-btn phone-btn">
                 <i class="fa-solid fa-phone"></i>
@@ -443,7 +450,6 @@
             </div>
         </div>
 
-        <!-- مجموعة الواتساب -->
         <div class="floating-group">
             <div class="floating-btn whatsapp-btn">
                 <i class="fa-brands fa-whatsapp"></i>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مستشفى ابن سينا</title>
+    <!-- استدعاء خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- مكتبة الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -11,7 +15,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cairo', sans-serif; /* تطبيق الخط على جميع العناصر */
         }
 
         body {
@@ -70,7 +74,8 @@
         h1 {
             color: #0056b3;
             margin-bottom: 15px;
-            font-size: 26px;
+            font-size: 24px;
+            font-weight: 800;
             animation: slideInDown 1s ease-out;
         }
 
@@ -87,7 +92,7 @@
 
         .animated-subtext {
             color: #555;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
             margin-bottom: 20px;
             font-weight: 600;
@@ -116,21 +121,22 @@
         }
 
         .info-item {
-            font-size: 15px;
+            font-size: 14px;
             color: #333;
             display: flex;
             align-items: center;
             gap: 8px;
+            font-weight: 600;
         }
 
         .info-title {
-            font-weight: bold;
+            font-weight: 700;
             color: #0056b3;
         }
 
         .section-title {
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 700;
             color: #0056b3;
             margin-bottom: 8px;
             text-align: right;
@@ -170,13 +176,13 @@
 
         .square-btn .label {
             font-size: 12px;
-            font-weight: normal;
+            font-weight: 600;
             opacity: 0.9;
         }
 
         .square-btn .number {
             font-size: 13px;
-            font-weight: bold;
+            font-weight: 700;
             direction: ltr;
         }
 
@@ -200,7 +206,7 @@
             padding: 12px 30px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             transition: background-color 0.3s ease;
             width: 100%;
             margin-top: 10px;
@@ -233,7 +239,7 @@
 
         .copyright-text {
             font-size: 13px;
-            font-weight: bold;
+            font-weight: 700;
             color: #d4b64e;
         }
 
@@ -364,7 +370,8 @@
 
         .modal-content h2 {
             color: #0056b3;
-            font-size: 22px;
+            font-size: 20px;
+            font-weight: 700;
             margin-bottom: 10px;
         }
 
@@ -373,7 +380,7 @@
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 25px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .modal-btn {
@@ -382,7 +389,7 @@
             border: none;
             padding: 12px 25px;
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
             width: 100%;
@@ -421,7 +428,7 @@
 
         .loader-text {
             font-size: 26px;
-            font-weight: bold;
+            font-weight: 800;
             color: #0056b3;
         }
     </style>
