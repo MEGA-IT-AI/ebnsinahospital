@@ -210,6 +210,9 @@
             transition: background-color 0.3s ease;
             width: 100%;
             margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
 
         .btn:hover {
@@ -234,7 +237,6 @@
             object-fit: contain;
         }
 
-        /* نص "تصميم بواسطة" باللون الذهبي */
         .copyright-text {
             font-size: 13px;
             font-weight: bold;
@@ -247,7 +249,6 @@
             align-items: center;
         }
 
-        /* اللون الذهبي الفاتح للأيقونات */
         .gold-light-btn {
             background-color: #e6ca65;
             color: #333;
@@ -307,7 +308,7 @@
             background-color: #0275d8;
         }
 
-        /* نافذة الترحيب */
+        /* نافذة المنبثقة العامة */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -399,11 +400,41 @@
             background-color: #e60000;
             transform: translateY(-2px);
         }
+
+        /* تنسيق أيقونة التحميل السريعة */
+        .loader-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .spinner-circle {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #e9ecef;
+            border-top: 5px solid #0056b3;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            font-size: 26px;
+            font-weight: bold;
+            color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
-    <!-- نافذة الترحيب -->
+    <!-- نافذة الترحيب الأولي -->
     <div id="welcomeModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-logos-container">
@@ -415,6 +446,17 @@
             <h2>أهلاً بك في مجموعة ابن سينا الطبية</h2>
             <p>نحن فخورون بتقديم الرعاية الصحية المتكاملة على مدار الساعة لخدمة أهلنا في العاشر من رمضان.</p>
             <button id="closeModalBtn" class="modal-btn">مرحباً، ابدأ التصفح</button>
+        </div>
+    </div>
+
+    <!-- نافذة أيقونة التحميل المخصصة -->
+    <div id="loadingModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="loader-box">
+                <div class="spinner-circle"></div>
+                <h2>جاري التحميل...</h2>
+                <div class="loader-text"><span id="counter">1</span>%</div>
+            </div>
         </div>
     </div>
 
@@ -443,7 +485,7 @@
                         <span class="label">اتصال</span>
                         <span class="number">01222243156</span>
                     </a>
-                    <a href="url?id=3" target="_blank" class="square-btn btn-whatsapp">
+                    <a href="https://wa.me/201222243156" target="_blank" class="square-btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span class="label">واتساب</span>
                         <span class="number">01222243156</span>
@@ -456,7 +498,7 @@
                         <span class="label">اتصال</span>
                         <span class="number">01222243157</span>
                     </a>
-                    <a href="https://wa.me/201222243157" target="_blank" class="square-btn btn-whatsapp">
+                    <a href="url?id=14" target="_blank" class="square-btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span class="label">واتساب</span>
                         <span class="number">01222243157</span>
@@ -464,9 +506,10 @@
                 </div>
             </div>
 
-            <a href="home.html" class="btn">الدخول علي الموقع</a>
+            <!-- زر فتح الموقع مع شاشة التحميل -->
+            <button id="openSiteBtn" class="btn">الدخول علي الموقع</button>
 
-            <!-- القسم السفلي: نص "تصميم بواسطة" أولاً على اليمين ثم الصورة ثم الأيقونات -->
+            <!-- القسم السفلي -->
             <div class="extra-section-inline">
                 <span class="copyright-text">تصميم بواسطة</span>
                 <img src="100.png" alt="صورة توضيحية" class="extra-image-small">
@@ -474,7 +517,7 @@
                     <a href="tel:01010255123" class="mini-icon-btn gold-light-btn" title="اتصال">
                         <i class="fa-solid fa-phone"></i>
                     </a>
-                    <a href="https://wa.me/201010255123" target="_blank" class="mini-icon-btn gold-light-btn" title="واتساب">
+                    <a href="url?id=4" target="_blank" class="mini-icon-btn gold-light-btn" title="واتساب">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -494,20 +537,48 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const modal = document.getElementById("welcomeModal");
-            const closeBtn = document.getElementById("closeModalBtn");
+            // نافذة الترحيب
+            const welcomeModal = document.getElementById("welcomeModal");
+            const closeWelcomeBtn = document.getElementById("closeModalBtn");
 
             setTimeout(function() {
-                modal.classList.add("show");
+                welcomeModal.classList.add("show");
             }, 500);
 
-            closeBtn.addEventListener("click", function() {
-                modal.classList.remove("show");
+            closeWelcomeBtn.addEventListener("click", function() {
+                welcomeModal.classList.remove("show");
             });
 
-            modal.addEventListener("click", function(e) {
-                if (e.target === modal) {
-                    modal.classList.remove("show");
+            // نافذة التحميل والعداد السريع عند الضغط على الزر
+            const loadingModal = document.getElementById("loadingModal");
+            const openSiteBtn = document.getElementById("openSiteBtn");
+            const counterEl = document.getElementById("counter");
+
+            openSiteBtn.addEventListener("click", function() {
+                loadingModal.classList.add("show");
+                let count = 1;
+                counterEl.textContent = count;
+
+                const timer = setInterval(function() {
+                    count += Math.floor(Math.random() * 8) + 5;
+                    if (count >= 100) {
+                        count = 100;
+                        counterEl.textContent = count;
+                        clearInterval(timer);
+
+                        // التوجه المباشر لصفحة home.html بعد الوصول لـ 100%
+                        setTimeout(function() {
+                            window.location.href = "home.html";
+                        }, 200);
+                    } else {
+                        counterEl.textContent = count;
+                    }
+                }, 30);
+            });
+
+            window.addEventListener("click", function(e) {
+                if (e.target === welcomeModal) {
+                    welcomeModal.classList.remove("show");
                 }
             });
         });
