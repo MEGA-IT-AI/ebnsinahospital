@@ -50,6 +50,11 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffe6e6;
         }
 
         /* حاوية الكروت */
@@ -90,23 +95,46 @@
         }
 
         .card-icon {
-            width: 60px;
-            height: 60px;
-            background-color: #e6f0fa;
-            color: #0056b3;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 15px auto;
-            font-size: 24px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 26px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* تغير لون الأيقونة وخلفيتها إلى الأحمر عند الوقوف على الكرت */
         .card:hover .card-icon {
-            background-color: #ffe6e6;
-            color: #e60000;
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* تخصيص ألوان الأيقونات خلفية ولوناً */
+        .icon-history {
+            background-color: #E6F6F0;
+            color: #00A86B; /* الأخضر الزمردي */
+        }
+
+        .icon-companies {
+            background-color: #E5E9F0;
+            color: #002147; /* الأزرق الكحلي */
+        }
+
+        .icon-schedules {
+            background-color: #EBF7FF;
+            color: #38B6FF; /* الأزرق السماوي */
+        }
+
+        .icon-hotel {
+            background-color: #FAF5E6;
+            color: #D4AF37; /* الذهبي الدافئ */
+        }
+
+        .icon-medical {
+            background-color: #FFF0EE;
+            color: #FF6F61; /* الأحمر المرجاني */
         }
 
         .card h3 {
@@ -243,6 +271,7 @@
             <img src="Logo HD.png" alt="شعار مستشفى ابن سينا">
             <span>مستشفى ابن سينا</span>
         </div>
+        <!-- تم تعديل المسار إلى index.html -->
         <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> الصفحة الرئيسية</a>
     </header>
 
@@ -252,7 +281,7 @@
         <div class="cards-grid">
             <!-- 1. كرت مسيرة المستشفى -->
             <div class="card" id="historyCard">
-                <div class="card-icon">
+                <div class="card-icon icon-history">
                     <i class="fa-solid fa-landmark"></i>
                 </div>
                 <h3>مسيرة المستشفى</h3>
@@ -261,7 +290,7 @@
 
             <!-- 2. كرت الشركات المتعاقدة -->
             <a href="companies.html" class="card">
-                <div class="card-icon">
+                <div class="card-icon icon-companies">
                     <i class="fa-solid fa-handshake"></i>
                 </div>
                 <h3>الشركات المتعاقد معها</h3>
@@ -269,8 +298,8 @@
             </a>
 
             <!-- 3. كرت جداول العيادات -->
-            <a href="schedule.html" class="card">
-                <div class="card-icon">
+            <a href="schedules.html" class="card">
+                <div class="card-icon icon-schedules">
                     <i class="fa-solid fa-calendar-days"></i>
                 </div>
                 <h3>جداول العيادات</h3>
@@ -279,7 +308,7 @@
 
             <!-- 4. كرت الخدمات الفندقية -->
             <a href="hotel-services.html" class="card">
-                <div class="card-icon">
+                <div class="card-icon icon-hotel">
                     <i class="fa-solid fa-hotel"></i>
                 </div>
                 <h3>الخدمات الفندقية</h3>
@@ -288,7 +317,7 @@
 
             <!-- 5. كرت الخدمات الطبية -->
             <a href="medical-services.html" class="card">
-                <div class="card-icon">
+                <div class="card-icon icon-medical">
                     <i class="fa-solid fa-user-doctor"></i>
                 </div>
                 <h3>الخدمات الطبية</h3>
@@ -311,9 +340,9 @@
         </div>
     </div>
 
-    <!-- الأزرار العائمة -->
+    <!-- الأزرار العائمة للتواصل -->
     <div class="floating-buttons">
-        <a href="url?id=5" target="_blank" class="float-btn float-whatsapp">
+        <a href="https://wa.me/201222243157" target="_blank" class="float-btn float-whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
         <a href="tel:01222243157" class="float-btn float-call">
@@ -327,17 +356,14 @@
             const historyModal = document.getElementById("historyModal");
             const closeHistoryBtn = document.getElementById("closeHistoryBtn");
 
-            // فتح النافذة المنبثقة عند الضغط على الكرت
             historyCard.addEventListener("click", function() {
                 historyModal.classList.add("show");
             });
 
-            // إغلاق النافذة عند الضغط على زر الإغلاق
             closeHistoryBtn.addEventListener("click", function() {
                 historyModal.classList.remove("show");
             });
 
-            // إغلاق النافذة عند الضغط في أي مكان خارجها
             window.addEventListener("click", function(e) {
                 if (e.target === historyModal) {
                     historyModal.classList.remove("show");
