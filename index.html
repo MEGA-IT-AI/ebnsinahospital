@@ -15,9 +15,9 @@
         }
 
         body {
-            background: linear-gradient(-45deg, #0056b3, #d9534f, #0275d8, #c9302c);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
+            /* ضبط الصورة بمقاس الشاشة تماماً وعدم قص أي جزء منها */
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('90.png') no-repeat center center fixed;
+            background-size: 100% 100%;
             color: #333;
             display: flex;
             justify-content: center;
@@ -25,12 +25,6 @@
             min-height: 100vh;
             padding: 20px;
             overflow-x: hidden;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .main-wrapper {
@@ -498,7 +492,7 @@
                         <span class="label">اتصال</span>
                         <span class="number">01222243157</span>
                     </a>
-                    <a href="url?id=14" target="_blank" class="square-btn btn-whatsapp">
+                    <a href="https://wa.me/201222243157" target="_blank" class="square-btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span class="label">واتساب</span>
                         <span class="number">01222243157</span>
@@ -517,7 +511,7 @@
                     <a href="tel:01010255123" class="mini-icon-btn gold-light-btn" title="اتصال">
                         <i class="fa-solid fa-phone"></i>
                     </a>
-                    <a href="url?id=4" target="_blank" class="mini-icon-btn gold-light-btn" title="واتساب">
+                    <a href="https://wa.me/201010255123" target="_blank" class="mini-icon-btn gold-light-btn" title="واتساب">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
